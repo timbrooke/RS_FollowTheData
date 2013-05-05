@@ -1,0 +1,206 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>amMap example</title>
+
+    <link rel="stylesheet" href="ammap/ammap.css" type="text/css">
+    <script src="ammap/ammap.js" type="text/javascript"></script>
+    <!-- map file should be included after ammap.js -->
+    <script src="ammap/maps/js/usaLow.js" type="text/javascript"></script>
+    <script src="ammap/maps/js/worldLow.js" type="text/javascript"></script>
+    <script src="http://www.amcharts.com/lib/amcharts.js" type="text/javascript"></script>
+
+    <link rel="stylesheet" href="jquerylibs/css/smoothness/jquery-ui-1.10.2.custom.css">
+
+
+    <script src="jquerylibs/js/jquery-1.9.1.js"></script>
+    <script src="jquerylibs/js/jquery-ui-1.10.2.custom.js"></script>
+
+
+    <script type="text/javascript">
+        var map;
+        
+        
+        
+        var chart;
+var chartData = {};
+
+chartData.world = [
+    { source: "Oil", energy: 3882.1},
+    { source: "Natural Gas", energy: 2653.1},
+    { source: "Coal", energy: 3278.3},
+    { source: "Nuclear", energy: 610.5},
+    { source: "Hydro", energy: 740.3}];
+
+chartData.US = [
+    { source: "Oil", energy: 842.9},
+    { source: "Natural Gas", energy: 588.7},
+    { source: "Coal", energy: 498},
+    { source: "Nuclear", energy: 190.2},
+    { source: "Hydro", energy: 62.2}];
+
+chartData.CN = [
+    { source: "Oil", energy: 404.6},
+    { source: "Natural Gas", energy: 79.8},
+    { source: "Coal", energy: 1537.4},
+    { source: "Nuclear", energy: 15.9},
+    { source: "Hydro", energy: 139.3}];
+
+chartData.RU = [
+    { source: "Oil", energy: 124.9},
+    { source: "Natural Gas", energy: 350.7},
+    { source: "Coal", energy: 82.9},
+    { source: "Nuclear", energy: 37},
+    { source: "Hydro", energy: 39.8}];
+
+chartData.IN = [
+    { source: "Oil", energy: 148.5},
+    { source: "Natural Gas", energy: 46.7},
+    { source: "Coal", energy: 245.8},
+    { source: "Nuclear", energy: 3.8},
+    { source: "Hydro", energy: 24}];
+
+chartData.JP = [
+    { source: "Oil", energy: 197.6},
+    { source: "Natural Gas", energy: 78.7},
+    { source: "Coal", energy: 108.8},
+    { source: "Nuclear", energy: 62.1},
+    { source: "Hydro", energy: 16.7}];
+        
+        
+        
+
+        AmCharts.ready(function() {
+            map = new AmCharts.AmMap();
+            map.pathToImages = "ammap/images/";
+            //map.panEventsEnabled = true; // this line enables pinch-zooming and dragging on touch devices
+
+            map.colorSteps = 10;
+            map.balloon.color = "#000000";
+            
+            
+
+
+            
+            var dataProvider = {
+                mapVar: AmCharts.maps.worldLow,
+         //       getAreasFromMap:true,
+            //    areas:[
+            //        {id: "GB", value: 0},
+            //        {id: "IT", value: 1000}
+           //     ]
+           areas:[],
+            };
+            
+           
+          
+       chart = new AmCharts.AmPieChart();
+
+    // title of the chart
+    chart.addLabel("0", "!20", "World", "center", 16);
+
+    chart.backgroundAlpha = 0.4;
+    chart.backgroundColor = "#000000";
+    chart.dataProvider = chartData.world;
+    chart.titleField = "source";
+    chart.valueField = "energy";
+    chart.sequencedAnimation = true;
+    chart.startEffect = "elastic";
+    chart.labelsEnabled = false;
+    chart.labelText = "[[title]]";
+    chart.startDuration = 2;
+    chart.labelRadius = 10;
+
+    // WRITE                                 
+    chart.write("chartdiv"); 
+         
+           
+            
+/*                        $.getJSON('test.json', function(data) {
+ alert("aaa");
+	                        $.each(data, function(key, val) {
+		                        dataProvider.areas.push({id:key,value:val});
+		                        alert(key+value);
+		                    });
+}); */
+
+
+
+
+   // var items  = $.getJSON("test.json").pipe(function (data) {
+    //    return data.items;
+   // });
+    
+    $.getJSON(
+ "test.json",
+     function(data){
+        $.each(data, function(i,user){
+         dataProvider.areas.push({id:""+user.id,value:user.value,description:user.description});
+       
+          map.validateData();
+    //    alert(user.value);
+        });
+      }
+);
+    
+   //  alert(items(0));
+
+
+
+//console.log("id:"+dataProvider.areas[0].id);
+
+
+            map.areasSettings = {
+                autoZoom: true
+            };
+            map.dataProvider = dataProvider;
+         
+            map.write("mapdiv");
+
+            var but = document.getElementById("button01");
+            but.onclick = function(){
+                dataProvider.areas.push({id:"US",value:5000000});
+                map.validateData();
+            }
+
+            $( "#timeSlider" ).slider({
+                value:2000,
+                min: 2000,
+                max: 2010,
+                step: 1,
+                slide: function( event, ui ) {
+                    $( "#amount" ).html(ui.value );
+                    dataProvider.areas[0].value = (ui.value - 2000) * 100;
+                    console.log("value:"+dataProvider.areas[0].value);
+                    //console.log("id:"+dataProvider.areas[0].id);
+
+                    /*
+                    dataProvider.areas =
+                    [
+                        {id: "GB", value: 10000},
+                        {id: "IT", value: 12000}
+                    ]
+                       */
+                    map.validateData();
+
+
+                }
+            });
+            $( "#amount" ).html( $( "#timeSlider" ).slider( "value" ) );
+
+
+        });
+    </script>
+</head>
+
+<body>
+<div id="mapdiv" style="width: 100%; background-color:#EEEEEE; height: 500px;"></div>
+<button id="button01">DO SOMETHING</button>
+    <div id="chartdiv" style="width: 200px; height: 150px; position: absolute; bottom: 0; right: 0; z-index: 100;"></div>
+<div id="timeSlider"></div>
+<div id="amount"></div>
+</body>
+
+</html>
