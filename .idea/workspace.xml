@@ -1,18 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f4165c8a-1128-4d57-99d2-02dd879cef84" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="f4165c8a-1128-4d57-99d2-02dd879cef84" name="Default" comment="" />
     <ignored path="RewiredStateFollowTheData.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/main.html" changelist="f4165c8a-1128-4d57-99d2-02dd879cef84" time="1367678405011" ignored="false" />
     <file path="/map.html" changelist="f4165c8a-1128-4d57-99d2-02dd879cef84" time="1367701218408" ignored="false" />
     <file path="/barrels.html" changelist="f4165c8a-1128-4d57-99d2-02dd879cef84" time="1367707392805" ignored="false" />
-    <file path="/Dummy.txt" changelist="f4165c8a-1128-4d57-99d2-02dd879cef84" time="1367755938736" ignored="false" />
+    <file path="/Dummy.txt" changelist="f4165c8a-1128-4d57-99d2-02dd879cef84" time="1367758174424" ignored="false" />
     <file path="/map4.html" changelist="f4165c8a-1128-4d57-99d2-02dd879cef84" time="1367747294080" ignored="false" />
-    <file path="/map5.html" changelist="f4165c8a-1128-4d57-99d2-02dd879cef84" time="1367755186612" ignored="false" />
+    <file path="/map5.html" changelist="f4165c8a-1128-4d57-99d2-02dd879cef84" time="1367758084911" ignored="false" />
     <file path="/colorTest.html" changelist="f4165c8a-1128-4d57-99d2-02dd879cef84" time="1367750954272" ignored="false" />
+    <file path="$PROJECT_DIR$/.idea/workspace.xml" changelist="f4165c8a-1128-4d57-99d2-02dd879cef84" time="1367758161847" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,13 +48,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="map5.html" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="map5.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/map5.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="105" column="22" selection-start="2625" selection-end="2625" vertical-scroll-proportion="0.48">
+            <state line="68" column="8" selection-start="1599" selection-end="1599" vertical-scroll-proportion="0.6456693">
               <folding>
+                <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#1;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#2;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -79,10 +78,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="barrels.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="barrels.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/oldAndTest/barrels.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="90" column="3" selection-start="2608" selection-end="2609" vertical-scroll-proportion="4.6075087">
+            <state line="90" column="3" selection-start="2608" selection-end="2609" vertical-scroll-proportion="-27.55102">
               <folding />
             </state>
           </provider>
@@ -355,12 +354,16 @@
       <created>1367755944353</created>
       <updated>1367755944353</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="More css styling.">
+      <created>1367758179226</created>
+      <updated>1367758179226</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1440" height="801" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -368,7 +371,7 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25466284" sideWeight="0.5770925" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25466284" sideWeight="0.5770925" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.4229075" sideWeight="0.60329986" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.4229075" sideWeight="0.39670014" order="7" side_tool="true" content_ui="tabs" />
@@ -425,7 +428,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Cleaned up directories and updated map app. Left side complete. Right side todo." />
+    <option name="LAST_COMMIT_MESSAGE" value="More css styling." />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -443,13 +446,14 @@
     <MESSAGE value="New css and legends." />
     <MESSAGE value="New colouration for map using min and max values" />
     <MESSAGE value="Cleaned up directories and updated map app. Left side complete. Right side todo." />
+    <MESSAGE value="More css styling." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/map5.html</url>
-          <line>150</line>
+          <line>157</line>
           <option name="timeStamp" value="7" />
         </line-breakpoint>
       </breakpoints>
@@ -561,20 +565,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/map5.html">
+    <entry file="file://$PROJECT_DIR$/oldAndTest/barrels.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="105" column="22" selection-start="2625" selection-end="2625" vertical-scroll-proportion="0.48">
-          <folding>
-            <element signature="n#style#0;n#div#1;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+        <state line="90" column="3" selection-start="2608" selection-end="2609" vertical-scroll-proportion="-27.55102">
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/oldAndTest/barrels.html">
+    <entry file="file://$PROJECT_DIR$/map5.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="90" column="3" selection-start="2608" selection-end="2609" vertical-scroll-proportion="4.6075087">
-          <folding />
+        <state line="68" column="8" selection-start="1599" selection-end="1599" vertical-scroll-proportion="0.6456693">
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
