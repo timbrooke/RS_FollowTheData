@@ -1,0 +1,328 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>amMap example</title>
+
+<link rel="stylesheet" href="ammap/ammap.css" type="text/css">
+<script src="ammap/ammap.js" type="text/javascript"></script>
+<!-- map file should be included after ammap.js -->
+<script src="ammap/maps/js/usaLow.js" type="text/javascript"></script>
+<script src="ammap/maps/js/worldLow.js" type="text/javascript"></script>
+<script src="http://www.amcharts.com/lib/amcharts.js" type="text/javascript"></script>
+
+<link rel="stylesheet" href="jquerylibs/css/smoothness/jquery-ui-1.10.2.custom.css">
+<link rel="stylesheet" href="style.css">
+
+<style>
+
+    .map {
+        width: 50%;
+        background-color: #EEEEEE;
+        padding: 0px;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+
+    .mapHolder {
+        height: 500px;
+    }
+
+    .leftMap {
+        float: left;
+    }
+
+    .rightMap {
+        float: right;
+    }
+</style>
+
+<script src="jquerylibs/js/jquery-1.9.1.js"></script>
+<script src="jquerylibs/js/jquery-ui-1.10.2.custom.js"></script>
+
+
+<script type="text/javascript">
+var map;
+var map2;
+var dataProvider;
+var dataProvider2;
+var currentYear = 2000;
+
+var sectionData;
+
+function updateYear(){
+    var year = document.getElementById('amount').innerHTML;
+    dataProvider.areas = [];
+    $.each(sectionData[year.toString()], function (i, user) {
+        dataProvider.areas.push({id: "" + user.id, value: user.value, description: user.description});
+    });
+    map.validateData();
+}
+
+function fullReloadData() {
+
+    var fieldName = document.getElementById('sort').value;
+    var year = document.getElementById('amount').innerHTML; //$("#timeSlider").slider("value");
+
+    dataProvider.areas = [];
+    map.validateData();
+
+    $.ajax({
+
+        url: "http://172.16.3.8:9999/new?field=" + fieldName,
+        type: 'get',
+        dataType: 'json',
+        success: function (data) {
+            sectionData = data;
+            dataProvider.areas = [];
+            $.each(sectionData[year.toString()], function (i, user) {
+                dataProvider.areas.push({id: "" + user.id, value: user.value, description: user.description});
+            });
+            setLegendByField(fieldName);
+            map.validateData();
+        }
+    });
+
+    function setLegend(minLabel, maxLabel) {
+        var valueLegend = new AmCharts.ValueLegend();
+        valueLegend.right = 10;
+        valueLegend.width = 300;
+        valueLegend.minValue = minLabel;
+        valueLegend.maxValue = maxLabel; //
+        map.valueLegend = valueLegend;
+    }
+
+    function setLegendByField(fieldName) {
+        switch (fieldName) {
+            case "oil":
+                setLegend("little oil production", "huge oil production");
+                break;
+            case "broadband":
+                setLegend("little broadband", "lots of broadband");
+                break;
+            case "population":
+                setLegend("small population", "large population");
+                break;
+            case "life":
+                setLegend("short life", "long life");
+                break;
+            case "child":
+                setLegend("low child mortality", "high child mortality");
+                break;
+            case "health":
+                setLegend("smaller government expenditure", "huge Government expenditure");
+                break;
+            case "electricity":
+                setLegend("smaller use", "larger use");
+                break;
+            case "eiti_gov":
+            case  "eiti_company":
+                setLegend("small gov. revenue", "large gov. revenue");
+                break;
+            case  "gas":
+                setLegend("small gas production", "large gas production");
+                break;
+            case "coal":
+                setLegend("less coal production", "huge coal production");
+                break;
+            case "out_of_school":
+                setLegend("less primary child out", "lot primary child out");
+                break;
+            case "roads":
+                setLegend("less roads paved", "more roads paved");
+                break;
+            case "gdp":
+                setLegend("less gdp", "big gdp");
+                break;
+            case "unemployment":
+                setLegend("less unemployment", "huge unemployment");
+                break;
+            default :
+                setLegend("", "");
+        }
+    }
+}
+
+
+function reloadData2() {
+    $.ajax({
+        //  url :  "http://172.16.3.8:9999/?year=2000&field=oil",
+
+        url: "http://172.16.3.8:9999/?year=" + document.getElementById('amount').innerHTML + "&field=" + document.getElementById('sort2').value,
+        type: 'get',
+        dataType: 'json',
+        success: function (data) {
+            dataProvider2.areas = [];
+            $.each(data, function (i, user) {
+                dataProvider2.areas.push({id: "" + user.id, value: user.value, description: user.description});
+            });
+            map2.validateData();
+        }
+    });
+}
+
+
+$(function () {
+    $("#sort").change(function (event) {
+        $("option:selected", $(this)).each(function () {
+            var obj = document.getElementById('sort').value;
+            fullReloadData();
+        });
+    });
+});
+
+$(function () {
+    $("#sort2").change(function (event) {
+        //alert("Click event on Select has occurred!");
+        $("option:selected", $(this)).each(function () {
+            var obj = document.getElementById('sort2').value;
+            reloadData2();
+
+
+        });
+    });
+});
+
+
+AmCharts.ready(function () {
+
+    map = new AmCharts.AmMap();
+
+    map.pathToImages = "ammap/images/";
+    //map.panEventsEnabled = true; // this line enables pinch-zooming and dragging on touch devices
+
+    map.colorSteps = 10;
+    map.balloon.color = "#000000";
+
+    dataProvider = {     mapVar: AmCharts.maps.worldLow,
+        areas: []
+    };
+
+    dataProvider2 = {     mapVar: AmCharts.maps.worldLow,
+        areas: []
+    };
+
+    map2 = new AmCharts.AmMap();
+
+    map2.pathToImages = "ammap/images/";
+    //map.panEventsEnabled = true; // this line enables pinch-zooming and dragging on touch devices
+
+    map2.colorSteps = 10;
+    map2.balloon.color = "#000000";
+
+    map.areasSettings = {
+        autoZoom: true
+    };
+    map.dataProvider = dataProvider;
+
+    map.write("mapdiv");
+
+    map2.areasSettings = {
+        autoZoom: true
+    };
+    map2.dataProvider = dataProvider2;
+
+    map2.write("mapdiv2");
+
+    fullReloadData();
+    reloadData2();
+
+    var but = document.getElementById("button01");
+    but.onclick = function () {
+        dataProvider.areas.push({id: "US", value: 5000000});
+        map.validateData();
+    }
+
+    $("#timeSlider").slider({
+        value: 2000,
+        min: 2000,
+        max: 2010,
+        step: 1,
+        slide: function (event, ui) {
+            $("#amount").html(ui.value);
+            dataProvider.areas[0].value = (ui.value - 2000) * 100;
+            map.validateData();
+            map2.validateData();
+            updateYear();
+            reloadData2();
+        }
+    });
+    $("#amount").html($("#timeSlider").slider("value"));
+});
+</script>
+</head>
+
+<body>
+<div class="wrapper">
+    <div class="map leftMap">
+        <div id="mapdiv" class="mapHolder"></div>
+    </div>
+    <div class="map rightMap">
+        <div id="mapdiv2" class="mapHolder"></div>
+    </div>
+
+    <!-- <select name="sort" id="sort" style="float:left;margin-bottom:20px; width: 50%;">
+      <option value="oil" selected="selected">oil</option>
+      <option>Coffee</option>
+      <option>Tea</option>
+    </select>  -->
+
+    <select name="sort" id="sort" style="float:left;margin-bottom:20px; width: 50%;">
+        <option value="broadband">Fixed broadband Internet subscribers</option>
+        <option value="population">Total population</option>
+        <option value="life">Life expectancy at birth</option>
+        <option value="child">Child mortality</option>
+        <option value="health">Government expenditure on health per-capita</option>
+        <option value="electricity">Electricity use per-capita</option>
+        <option value="eiti_gov">Government Revenue (as reported by Government</option>
+        <option value="eiti_company">Government Revenue (as reported by Companies)</option>
+        <option value="gas">Gross Natural Gas Production</option>
+        <option value="oil">Total Oil Supply</option>
+        <option value="coal">Total Primary Coal Production</option>
+        <option value="out_of_school">Primary children out of school</option>
+        <option value="roads">Roads paved</option>
+        <option value="gdp">Income per person</option>
+        <option value="unemployment">Long term unemployment</option>
+    </select>
+
+    <!--
+    <select  name="sort2" id="sort2" style="float:right;margin-bottom:20px; width: 49%;">
+      <option selected>Milk</option>
+      <option>Coffee</option>
+      <option>Tea</option>
+    </select>
+    -->
+
+    <select name="sort2" id="sort2" style="float:left;margin-bottom:20px; width: 50%;">
+        <option value="broadband">Fixed broadband Internet subscribers</option>
+        <option value="population">Total population</option>
+        <option value="life">Life expectancy at birth</option>
+        <option value="child">Child mortality</option>
+        <option value="health">Government expenditure on health per-capita</option>
+        <option value="electricity">Electricity use per-capita</option>
+        <option value="eiti_gov">Government Revenue (as reported by Government)</option>
+        <option value="eiti_company">Government Revenue (as reported by Companies)</option>
+        <option value="gas">Gross Natural Gas Production</option>
+        <option value="oil">Total Oil Supply</option>
+        <option value="coal">Total Primary Coal Production</option>
+        <option value="out_of_school">Primary children out of school</option>
+        <option value="roads">Roads paved</option>
+        <option value="gdp">Income per person</option>
+        <option value="unemployment">Long term unemployment</option>
+    </select>
+
+
+    <div id="chartdiv"
+         style="width: 200px; height: 150px; position: absolute; bottom: 0; right: 0; z-index: 100;"></div>
+    <div id="timeSlider"></div>
+    <div class="val" style=" float:left;">Year:</div>
+    <div id="amount" style=" float:left;">2000</div>
+
+    <br/>
+    <button id="button01">DO SOMETHING</button>
+</div>
+</body>
+
+</html>
