@@ -4,3 +4,13 @@
     text-align: left;
     width: 98%;
 }
+
+#amount, .val {
+	
+font-size:14pt;
+font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+font-weight:bold;
+font-style:italic;
+color:black;
+
+}

@@ -23,37 +23,216 @@
         var map;
          var map2;
         var dataProvider;
+         var dataProvider2;
     
                       function reloadData(){
 	             
-	            alert( document.getElementById('sort').value +" " +  document.getElementById('sort2').value + " " + document.getElementById('amount').innerHTML); 
-	             
-	        /*         $.getJSON(
- "test.json",
-     function(data){
-        $.each(data, function(i,user){
-         dataProvider.areas.push({id:""+user.id,value:user.value,description:user.description});
-       
-          map.validateData();
-    //    alert(user.value);
-        });
-      }
-);
-	             
-*/	   
-//$.ajaxSetup({ scriptCharset: "utf-8" , contentType: "application/json; charset=utf-8"});
-//alert("dd");
+	          
+	            
+	        
 
+	     
 $.ajax({
-    url :  "http://172.16.3.8:9999/?year=2000&field=oil",                          
+  //  url :  "http://172.16.3.8:9999/?year=2000&field=oil",                
+  
+   url :  "http://172.16.3.8:9999/?year="+  document.getElementById('amount').innerHTML +  "&field=" + document.getElementById('sort').value ,               
     type: 'get',                   
     dataType:'json',                   
     success : function(data) {  
-        console.log(data);
-        alert(data.length);
+    
+    
+   /* $.each( dataProvider.areas, function(i){
+    
+      dataProvider.areas.remove(i)
+    });
+    });
+    */
+    
+  
+//for (var i = 0; i < dataProvider.areas.length; i++) {
+ //    dataProvider.areas.remove(i);
+    //Do something
+//}
+    dataProvider.areas = [];
+    
+    
+     $.each(data, function(i,user){
+        //  alert(user.value);
+         dataProvider.areas.push({id:""+user.id,value:user.value,description:user.description});
+     
+         
+      
+        });
+        
+        
+        if (document.getElementById('sort').value == "oil"){
+           var valueLegend = new AmCharts.ValueLegend();
+			    valueLegend.right = 10;      valueLegend.width = 300,
+			    valueLegend.minValue = "little oil prdouction";
+			    valueLegend.maxValue = "huge oil production";
+			    map.valueLegend = valueLegend;
+		map.title = "Oil";
+  }
+  else if (document.getElementById('sort').value == "broadband"){
+           var valueLegend = new AmCharts.ValueLegend();
+			    valueLegend.right = 10;      valueLegend.width = 300,
+			    valueLegend.minValue = "less broadband";
+			    valueLegend.maxValue = "plenty broadband";
+			    map.valueLegend = valueLegend;
+  }
+   else if (document.getElementById('sort').value == "population"){
+           var valueLegend = new AmCharts.ValueLegend();
+			    valueLegend.right = 10;      valueLegend.width = 300,
+			    valueLegend.minValue = "less population";
+			    valueLegend.maxValue = "plenty population";
+			    map.valueLegend = valueLegend;
+  }
+   else if (document.getElementById('sort').value == "life"){
+           var valueLegend = new AmCharts.ValueLegend();
+			    valueLegend.right = 10;      valueLegend.width = 300,
+			    valueLegend.minValue = "less life";
+			    valueLegend.maxValue = "long life";
+			    map.valueLegend = valueLegend;
+  }
+   else if (document.getElementById('sort').value == "child"){
+           var valueLegend = new AmCharts.ValueLegend();
+			    valueLegend.right = 10;      valueLegend.width = 300,
+			    valueLegend.minValue = "less child mortality";
+			    valueLegend.maxValue = "huge child mortality";
+			    map.valueLegend = valueLegend;
+  }
+   else if (document.getElementById('sort').value == "health"){
+           var valueLegend = new AmCharts.ValueLegend();
+			    valueLegend.right = 10;      valueLegend.width = 300,
+			    valueLegend.minValue = "less Government expenditure";
+			    valueLegend.maxValue = "huge Government expenditure";
+			    map.valueLegend = valueLegend;
+  }
+   else if (document.getElementById('sort').value == "electricity"){
+           var valueLegend = new AmCharts.ValueLegend();
+			    valueLegend.right = 10;      valueLegend.width = 300,
+			    valueLegend.minValue = "less use";
+			    valueLegend.maxValue = "huge use";
+			    map.valueLegend = valueLegend;
+  }
+   else if (document.getElementById('sort').value == "eiti_gov"){
+           var valueLegend = new AmCharts.ValueLegend();
+			    valueLegend.right = 10;      valueLegend.width = 300,
+			    valueLegend.minValue = "less Government Revenue";
+			    valueLegend.maxValue = "huge Government Revenue";
+			    map.valueLegend = valueLegend;
+  }
+   else if (document.getElementById('sort').value == "eiti_company"){
+           var valueLegend = new AmCharts.ValueLegend();
+			    valueLegend.right = 10;      valueLegend.width = 300,
+			    valueLegend.minValue = "less Government Revenue";
+			    valueLegend.maxValue = "huge Government Revenue";
+			    map.valueLegend = valueLegend;
+  }
+   else if (document.getElementById('sort').value == "gas"){
+           var valueLegend = new AmCharts.ValueLegend();
+			    valueLegend.right = 10;      valueLegend.width = 300,
+			    valueLegend.minValue = "less gas production";
+			    valueLegend.maxValue = "huge gas production";
+			    map.valueLegend = valueLegend;
+  }
+   else if (document.getElementById('sort').value == "coal"){
+           var valueLegend = new AmCharts.ValueLegend();
+			    valueLegend.right = 10;      valueLegend.width = 300,
+			    valueLegend.minValue = "less coal production";
+			    valueLegend.maxValue = "huge coal production";
+			    map.valueLegend = valueLegend;
+  }
+   else if (document.getElementById('sort').value == "out_of_school"){
+           var valueLegend = new AmCharts.ValueLegend();
+			    valueLegend.right = 10;      valueLegend.width = 300,
+			    valueLegend.minValue = "less primary child out";
+			    valueLegend.maxValue = "lot primary child out";
+			    map.valueLegend = valueLegend;
+  }
+    else if (document.getElementById('sort').value == "roads"){
+           var valueLegend = new AmCharts.ValueLegend();
+			    valueLegend.right = 10;      valueLegend.width = 300,
+			    valueLegend.minValue = "less roads paved";
+			    valueLegend.maxValue = "lot road paved";
+			    map.valueLegend = valueLegend;
+  }
+    else if (document.getElementById('sort').value == "gdp"){
+           var valueLegend = new AmCharts.ValueLegend();
+			    valueLegend.right = 10;      valueLegend.width = 300,
+			    valueLegend.minValue = "less gdp";
+			    valueLegend.maxValue = "big gdp";
+			    map.valueLegend = valueLegend;
+  }
+    else if (document.getElementById('sort').value == "unemployment"){
+           var valueLegend = new AmCharts.ValueLegend();
+			    valueLegend.right = 10;
+			       valueLegend.width = 300,
+			    valueLegend.minValue = "less unemployment";
+			    valueLegend.maxValue = "huge unemployment";
+			    map.valueLegend = valueLegend;
+  }
+  
+  else{
+	   var valueLegend = new AmCharts.ValueLegend();
+	    map.valueLegend = valueLegend;
+  }
+         map.validateData();
         
     }
-});
+}); 
+
+
+ /*$.getJSON(
+//  "test.json",
+  
+ "http://172.16.3.8:9999/?year=2000&field=oil"+"&callback=?",
+  
+     function(data){
+     alert("length:" +data.length);
+        $.each(data, function(i,user){
+          alert(user.value);
+         dataProvider.areas.push({id:""+user.id,value:user.value,description:user.description});
+       
+          map.validateData();
+      
+        });
+      }
+); */
+
+          
+             };  
+             
+             
+             
+                      function reloadData2(){
+	             
+	     
+	     //  dataProvider2.areas.clear();
+$.ajax({
+  //  url :  "http://172.16.3.8:9999/?year=2000&field=oil",                
+  
+   url :  "http://172.16.3.8:9999/?year="+  document.getElementById('amount').innerHTML +  "&field=" + document.getElementById('sort2').value ,               
+    type: 'get',                   
+    dataType:'json',                   
+    success : function(data) {  
+    
+  dataProvider2.areas = [];
+
+    
+     $.each(data, function(i,user){
+        //  alert(user.value);
+         dataProvider2.areas.push({id:""+user.id,value:user.value,description:user.description});
+       
+         
+      
+        });
+        
+        
+         map2.validateData();
+        
+    }
+}); 
 
 
  /*$.getJSON(
@@ -80,7 +259,20 @@ $.ajax({
 
 
           
-             };  
+             };               
+             
+             
+             
+             
+             
+             
+             
+             
+             
+             
+             
+             
+             
     
     $(function(){
     
@@ -102,7 +294,8 @@ $.ajax({
             //alert("Click event on Select has occurred!");
             $("option:selected", $(this)).each(function(){
                 var obj = document.getElementById('sort2').value;
-                alert("selected value"+obj);    
+                 reloadData2();
+                 
 
             });
           });
@@ -116,6 +309,7 @@ $.ajax({
         
 
         AmCharts.ready(function() {
+       
             map = new AmCharts.AmMap();
             
             map.pathToImages = "ammap/images/";
@@ -132,6 +326,17 @@ $.ajax({
             
             
            dataProvider = {     mapVar: AmCharts.maps.worldLow,
+           
+			        
+         //       getAreasFromMap:true,
+            //    areas:[
+            //        {id: "GB", value: 0},
+            //        {id: "IT", value: 1000}
+           //     ]
+           areas:[],
+            };
+            
+                 dataProvider2 = {     mapVar: AmCharts.maps.worldLow,
          //       getAreasFromMap:true,
             //    areas:[
             //        {id: "GB", value: 0},
@@ -158,94 +363,14 @@ $.ajax({
 
 
             
-            var dataProvider2 = {
-                mapVar: AmCharts.maps.worldLow,
-         //       getAreasFromMap:true,
-            //    areas:[
-            //        {id: "GB", value: 0},
-            //        {id: "IT", value: 1000}
-           //     ]
-           areas:[],
-            };
+    
             
             
             
+      
             
             
-                       function reloadData(){
-	             
-	            alert( document.getElementById('sort').value +" " +  document.getElementById('sort2').value + " " + document.getElementById('amount').innerHTML); 
-	             
-	        /*         $.getJSON(
- "test.json",
-     function(data){
-        $.each(data, function(i,user){
-         dataProvider.areas.push({id:""+user.id,value:user.value,description:user.description});
-       
-          map.validateData();
-    //    alert(user.value);
-        });
-      }
-);
-	             
-*/	   
-
- $.getJSON(
- "test.json",
-     function(data){
-        $.each(data, function(i,user){
-         dataProvider.areas.push({id:""+user.id,value:user.value,description:user.description});
-       
-          map.validateData();
-    //    alert(user.value);
-        });
-      }
-);
-
-
           
-             };  
-            
-            
-            
-            
-                      
-/*                        $.getJSON('test.json', function(data) {
- alert("aaa");
-	                        $.each(data, function(key, val) {
-		                        dataProvider.areas.push({id:key,value:val});
-		                        alert(key+value);
-		                    });
-}); */
-
-
-
-
-   // var items  = $.getJSON("test.json").pipe(function (data) {
-    //    return data.items;
-   // });
-    
- /*   $.getJSON(
- "test.json",
-     function(data){
-        $.each(data, function(i,user){
-         dataProvider.areas.push({id:""+user.id,value:user.value,description:user.description});
-       
-          map.validateData();
-    //    alert(user.value);
-        });
-      }
-);
-
-
-*/
-    
-   //  alert(items(0));
-
-
-
-//console.log("id:"+dataProvider.areas[0].id);
-
 
             map.areasSettings = {
                 autoZoom: true
@@ -260,11 +385,12 @@ $.ajax({
                    map2.areasSettings = {
                 autoZoom: true
             };
-            map2.dataProvider = dataProvider;
+            map2.dataProvider = dataProvider2;
          
             map2.write("mapdiv2");
             
-            
+            reloadData();
+            reloadData2();
 
             var but = document.getElementById("button01");
             but.onclick = function(){
@@ -291,8 +417,12 @@ $.ajax({
                     ]
                        */
                     map.validateData();
+                      map2.validateData();
+                      
+          
 
 reloadData();
+reloadData2();
                 }
             });
             $( "#amount" ).html( $( "#timeSlider" ).slider( "value" ) );
@@ -305,21 +435,63 @@ reloadData();
 <body>
 <div id="mapdiv" style=" float:left;width: 50%; background-color:#EEEEEE; height: 500px;"></div>
 <div id="mapdiv2" style=" float: right;width: 49%; background-color:#EEEEEE; height: 500px;"></div>
-<select name="sort" id="sort" style="float:left;margin-bottom:20px; width: 50%;">
-  <option selected="">Milk</option>
+<!-- <select name="sort" id="sort" style="float:left;margin-bottom:20px; width: 50%;">
+  <option value="oil" selected="selected">oil</option>
   <option>Coffee</option>
   <option>Tea</option>
+</select>  -->
+
+<select name="sort" id="sort" style="float:left;margin-bottom:20px; width: 50%;">
+ <option value="broadband">Fixed broadband Internet subscribers</option>
+ <option value="population">Total population</option>
+ <option value="life">Life expectancy at birth</option>
+ <option value="child">Child mortality</option>
+ <option value="health">Government expenditure on health per-capita</option>
+ <option value="electricity">Electricity use per-capita</option>
+ <option value="eiti_gov">Government Revenue (as reported by Government</option>
+ <option value="eiti_company">Government Revenue (as reported by Companies)</option>
+ <option value="gas">Gross Natural Gas Production</option>
+ <option value="oil">Total Oil Supply</option>
+ <option value="coal">Total Primary Coal Production</option>
+ <option value="out_of_school">Primary children out of school</option>
+ <option value="roads">Roads paved</option>
+ <option value="gdp">Income per person</option>
+<option value="unemployment">Long term unemployment</option>
 </select>
+
+<!--
 <select  name="sort2" id="sort2" style="float:right;margin-bottom:20px; width: 49%;">
   <option selected>Milk</option>
   <option>Coffee</option>
   <option>Tea</option>
 </select>
+-->
+
+<select name="sort2" id="sort2" style="float:left;margin-bottom:20px; width: 50%;">
+ <option value="broadband">Fixed broadband Internet subscribers</option>
+ <option value="population">Total population</option>
+ <option value="life">Life expectancy at birth</option>
+ <option value="child">Child mortality</option>
+ <option value="health">Government expenditure on health per-capita</option>
+ <option value="electricity">Electricity use per-capita</option>
+ <option value="eiti_gov">Government Revenue (as reported by Government)</option>
+ <option value="eiti_company">Government Revenue (as reported by Companies)</option>
+ <option value="gas">Gross Natural Gas Production</option>
+ <option value="oil">Total Oil Supply</option>
+ <option value="coal">Total Primary Coal Production</option>
+ <option value="out_of_school">Primary children out of school</option>
+ <option value="roads">Roads paved</option>
+ <option value="gdp">Income per person</option>
+<option value="unemployment">Long term unemployment</option>
+</select>
+
 
 
     <div id="chartdiv" style="width: 200px; height: 150px; position: absolute; bottom: 0; right: 0; z-index: 100;"></div>
 <div id="timeSlider"></div>
-<div id="amount"></div> <button id="button01">DO SOMETHING</button> 
+<div class="val" style=" float:left;">Year: </div> <div id="amount" style=" float:left;"></div> 
+
+<br/>  <button id="button01">DO SOMETHING</button> 
 </body>
 
 </html>
