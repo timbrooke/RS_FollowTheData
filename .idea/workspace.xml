@@ -1,20 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f4165c8a-1128-4d57-99d2-02dd879cef84" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/map5.html" afterPath="$PROJECT_DIR$/map5.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="f4165c8a-1128-4d57-99d2-02dd879cef84" name="Default" comment="" />
     <ignored path="RewiredStateFollowTheData.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/main.html" changelist="f4165c8a-1128-4d57-99d2-02dd879cef84" time="1367678405011" ignored="false" />
     <file path="/map.html" changelist="f4165c8a-1128-4d57-99d2-02dd879cef84" time="1367701218408" ignored="false" />
     <file path="/barrels.html" changelist="f4165c8a-1128-4d57-99d2-02dd879cef84" time="1367707392805" ignored="false" />
-    <file path="/Dummy.txt" changelist="f4165c8a-1128-4d57-99d2-02dd879cef84" time="1367762524655" ignored="false" />
+    <file path="/Dummy.txt" changelist="f4165c8a-1128-4d57-99d2-02dd879cef84" time="1367763154612" ignored="false" />
     <file path="/map4.html" changelist="f4165c8a-1128-4d57-99d2-02dd879cef84" time="1367747294080" ignored="false" />
-    <file path="/map5.html" changelist="f4165c8a-1128-4d57-99d2-02dd879cef84" time="1367762495826" ignored="false" />
+    <file path="/map5.html" changelist="f4165c8a-1128-4d57-99d2-02dd879cef84" time="1367762972512" ignored="false" />
     <file path="/colorTest.html" changelist="f4165c8a-1128-4d57-99d2-02dd879cef84" time="1367750954272" ignored="false" />
     <file path="/map5.js" changelist="f4165c8a-1128-4d57-99d2-02dd879cef84" time="1367761694738" ignored="false" />
+    <file path="$PROJECT_DIR$/.idea/workspace.xml" changelist="f4165c8a-1128-4d57-99d2-02dd879cef84" time="1367763142665" ignored="false" />
+    <file path="/style.css" changelist="f4165c8a-1128-4d57-99d2-02dd879cef84" time="1367763092685" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,14 +42,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="map5.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="map5.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/map5.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="31" column="21" selection-start="1064" selection-end="1064" vertical-scroll-proportion="-0.913349">
+            <state line="70" column="23" selection-start="1847" selection-end="1847" vertical-scroll-proportion="-11.875">
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#1;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="style.css" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/style.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="9" column="12" selection-start="125" selection-end="125" vertical-scroll-proportion="0.29933482">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -107,15 +115,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="heatMap.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/oldAndTest/heatMap.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="39" selection-start="972" selection-end="1032" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="jquery-ui-1.10.2.custom.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/jquerylibs/js/jquery-ui-1.10.2.custom.js">
           <provider selected="true" editor-type-id="text-editor">
@@ -152,6 +151,7 @@
         <option value="$PROJECT_DIR$/colorTest.html" />
         <option value="$PROJECT_DIR$/src/map5.js" />
         <option value="$PROJECT_DIR$/map5.html" />
+        <option value="$PROJECT_DIR$/style.css" />
       </list>
     </option>
   </component>
@@ -400,7 +400,11 @@
       <created>1367762532783</created>
       <updated>1367762532783</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Layout changes.">
+      <created>1367763159391</created>
+      <updated>1367763159391</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -470,7 +474,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Both sides of the map working." />
+    <option name="LAST_COMMIT_MESSAGE" value="Layout changes." />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -490,6 +494,7 @@
     <MESSAGE value="Cleaned up directories and updated map app. Left side complete. Right side todo." />
     <MESSAGE value="More css styling." />
     <MESSAGE value="Both sides of the map working." />
+    <MESSAGE value="Layout changes." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -503,13 +508,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/oldAndTest/heatMap.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="39" selection-start="963" selection-end="1023" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/oldAndTest/heatMap.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="27" column="39" selection-start="972" selection-end="1032" vertical-scroll-proportion="0.0">
@@ -602,11 +600,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/map5.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="21" selection-start="1064" selection-end="1064" vertical-scroll-proportion="-0.913349">
+        <state line="70" column="23" selection-start="1847" selection-end="1847" vertical-scroll-proportion="-11.875">
           <folding>
             <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#1;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="12" selection-start="125" selection-end="125" vertical-scroll-proportion="0.29933482">
+          <folding />
         </state>
       </provider>
     </entry>
