@@ -1,19 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f4165c8a-1128-4d57-99d2-02dd879cef84" name="Default" comment="" />
+    <list default="true" id="f4165c8a-1128-4d57-99d2-02dd879cef84" name="Default" comment="Layout changes.">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/rawData" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/rs_data.json" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/indicator.json" afterPath="$PROJECT_DIR$/oldAndTest/indicator.json" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/test.json" afterPath="$PROJECT_DIR$/oldAndTest/test.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
     <ignored path="RewiredStateFollowTheData.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/main.html" changelist="f4165c8a-1128-4d57-99d2-02dd879cef84" time="1367678405011" ignored="false" />
     <file path="/map.html" changelist="f4165c8a-1128-4d57-99d2-02dd879cef84" time="1367701218408" ignored="false" />
     <file path="/barrels.html" changelist="f4165c8a-1128-4d57-99d2-02dd879cef84" time="1367707392805" ignored="false" />
-    <file path="/Dummy.txt" changelist="f4165c8a-1128-4d57-99d2-02dd879cef84" time="1367763154612" ignored="false" />
+    <file path="/Dummy.txt" changelist="f4165c8a-1128-4d57-99d2-02dd879cef84" time="1367784564724" ignored="false" />
     <file path="/map4.html" changelist="f4165c8a-1128-4d57-99d2-02dd879cef84" time="1367747294080" ignored="false" />
     <file path="/map5.html" changelist="f4165c8a-1128-4d57-99d2-02dd879cef84" time="1367762972512" ignored="false" />
     <file path="/colorTest.html" changelist="f4165c8a-1128-4d57-99d2-02dd879cef84" time="1367750954272" ignored="false" />
     <file path="/map5.js" changelist="f4165c8a-1128-4d57-99d2-02dd879cef84" time="1367761694738" ignored="false" />
-    <file path="$PROJECT_DIR$/.idea/workspace.xml" changelist="f4165c8a-1128-4d57-99d2-02dd879cef84" time="1367763142665" ignored="false" />
     <file path="/style.css" changelist="f4165c8a-1128-4d57-99d2-02dd879cef84" time="1367763092685" ignored="false" />
+    <file path="/jsonMugger.html" changelist="f4165c8a-1128-4d57-99d2-02dd879cef84" time="1367766027026" ignored="false" />
+    <file path="/rs_data.json" changelist="f4165c8a-1128-4d57-99d2-02dd879cef84" time="1367766955253" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,92 +40,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="map4.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/oldAndTest/map4.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="122" column="9" selection-start="4487" selection-end="4487" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="map5.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/map5.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="70" column="23" selection-start="1847" selection-end="1847" vertical-scroll-proportion="-11.875">
-              <folding>
-                <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="style.css" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/style.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="12" selection-start="125" selection-end="125" vertical-scroll-proportion="0.29933482">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="map5.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/map5.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="29" column="40" selection-start="934" selection-end="934" vertical-scroll-proportion="-17.4">
+            <state line="76" column="30" selection-start="3023" selection-end="3028" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="colorTest.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/oldAndTest/colorTest.html">
+      <file leaf-file-name="indicator.json" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/oldAndTest/indicator.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="75" selection-start="216" selection-end="216" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="barrels.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/oldAndTest/barrels.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="90" column="3" selection-start="2608" selection-end="2609" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="172.16.3.8:9999" pinned="false" current="false" current-in-tab="false">
-        <entry file="http://172.16.3.8:9999/?year=&amp;field=broadband">
-          <provider selected="true" editor-type-id="httpFileEditor">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/oldAndTest/main.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="7" selection-start="411" selection-end="411" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="jquery-1.9.1.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/jquerylibs/js/jquery-1.9.1.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="1041" column="0" selection-start="26270" selection-end="26270" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="jquery-ui-1.10.2.custom.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/jquerylibs/js/jquery-ui-1.10.2.custom.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="10655" column="32" selection-start="326426" selection-end="326426" vertical-scroll-proportion="0.0">
+            <state line="16" column="8" selection-start="299" selection-end="299" vertical-scroll-proportion="0.53333336">
               <folding />
             </state>
           </provider>
@@ -150,8 +84,11 @@
         <option value="$PROJECT_DIR$/map4.html" />
         <option value="$PROJECT_DIR$/colorTest.html" />
         <option value="$PROJECT_DIR$/src/map5.js" />
-        <option value="$PROJECT_DIR$/map5.html" />
         <option value="$PROJECT_DIR$/style.css" />
+        <option value="$PROJECT_DIR$/map5.html" />
+        <option value="$PROJECT_DIR$/jsonMugger.html" />
+        <option value="$PROJECT_DIR$/rawData" />
+        <option value="$PROJECT_DIR$/rs_data.json" />
       </list>
     </option>
   </component>
@@ -159,7 +96,7 @@
   <component name="ProjectFrameBounds">
     <option name="y" value="22" />
     <option name="width" value="1440" />
-    <option name="height" value="801" />
+    <option name="height" value="798" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -206,34 +143,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="RewiredStateFollowTheData" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="RewiredStateFollowTheData" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="RewiredStateFollowTheData" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="RewiredStateFollowTheData" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="imgs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -241,13 +150,13 @@
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="true" />
-    <property name="recentsLimit" value="5" />
     <property name="options.lastSelected" value="project.propVCSSupport.Mappings" />
+    <property name="recentsLimit" value="5" />
     <property name="restartRequiresConfirmation" value="true" />
     <property name="FullScreen" value="false" />
     <property name="DefaultHtmlFileTemplate" value="Html5" />
-    <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="PublishConfig">
     <servers>
@@ -266,21 +175,13 @@
       <recent name="$PROJECT_DIR$/libs" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/imgs" />
       <recent name="$PROJECT_DIR$/oldAndTest" />
+      <recent name="$PROJECT_DIR$/data" />
+      <recent name="$PROJECT_DIR$/imgs" />
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.map5.html">
-    <configuration default="false" name="map.html" type="JavascriptDebugSession" factoryName="Local" singleton="true" temporary="true">
-      <JSDebuggerConfigurationSettings>
-        <option name="engineId" value="firefox" />
-        <option name="fileUrl" value="file://$PROJECT_DIR$/map.html" />
-      </JSDebuggerConfigurationSettings>
-      <RunnerSettings RunnerId="JavascriptDebugRunner" />
-      <ConfigurationWrapper RunnerId="JavascriptDebugRunner" />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="JavaScript Debug.jsonMugger.html">
     <configuration default="false" name="barrels.html" type="JavascriptDebugSession" factoryName="Local" singleton="true" temporary="true">
       <JSDebuggerConfigurationSettings>
         <option name="engineId" value="embedded" />
@@ -317,11 +218,17 @@
       <ConfigurationWrapper RunnerId="JavascriptDebugRunner" />
       <method />
     </configuration>
-    <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
-      <TestRunner />
+    <configuration default="false" name="jsonMugger.html" type="JavascriptDebugSession" factoryName="Local" singleton="true" temporary="true">
+      <JSDebuggerConfigurationSettings>
+        <option name="engineId" value="embedded" />
+        <option name="fileUrl" value="file://$PROJECT_DIR$/jsonMugger.html" />
+      </JSDebuggerConfigurationSettings>
+      <RunnerSettings RunnerId="JavascriptDebugRunner" />
+      <ConfigurationWrapper RunnerId="JavascriptDebugRunner" />
       <method />
     </configuration>
-    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
+    <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
+      <TestRunner />
       <method />
     </configuration>
     <configuration default="true" type="JavascriptDebugSession" factoryName="Local" singleton="true">
@@ -331,20 +238,23 @@
       </JSDebuggerConfigurationSettings>
       <method />
     </configuration>
+    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
+      <method />
+    </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.map.html" />
-      <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.barrels.html" />
-      <item index="2" class="java.lang.String" itemvalue="JavaScript Debug.map4.html" />
-      <item index="3" class="java.lang.String" itemvalue="JavaScript Debug.map5.html" />
-      <item index="4" class="java.lang.String" itemvalue="JavaScript Debug.colorTest.html" />
+      <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.barrels.html" />
+      <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.map4.html" />
+      <item index="2" class="java.lang.String" itemvalue="JavaScript Debug.map5.html" />
+      <item index="3" class="java.lang.String" itemvalue="JavaScript Debug.colorTest.html" />
+      <item index="4" class="java.lang.String" itemvalue="JavaScript Debug.jsonMugger.html" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.map5.html" />
-        <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.colorTest.html" />
-        <item index="2" class="java.lang.String" itemvalue="JavaScript Debug.map4.html" />
-        <item index="3" class="java.lang.String" itemvalue="JavaScript Debug.barrels.html" />
-        <item index="4" class="java.lang.String" itemvalue="JavaScript Debug.map.html" />
+        <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.jsonMugger.html" />
+        <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.map5.html" />
+        <item index="2" class="java.lang.String" itemvalue="JavaScript Debug.colorTest.html" />
+        <item index="3" class="java.lang.String" itemvalue="JavaScript Debug.map4.html" />
+        <item index="4" class="java.lang.String" itemvalue="JavaScript Debug.barrels.html" />
       </list>
     </recent_temporary>
   </component>
@@ -408,25 +318,25 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="22" width="1440" height="801" extended-state="6" />
+    <frame x="0" y="22" width="1440" height="798" extended-state="6" />
     <editor active="false" />
     <layout>
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26183644" sideWeight="0.73715127" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26284876" sideWeight="0.60329986" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2661406" sideWeight="0.7382353" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2617354" sideWeight="0.60329986" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26284876" sideWeight="0.39670014" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2617647" sideWeight="0.39670014" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -504,34 +414,10 @@
           <option name="timeStamp" value="7" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="16" />
+      <option name="time" value="18" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/oldAndTest/heatMap.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="39" selection-start="972" selection-end="1032" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/libs/d3.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="http://172.16.3.8:9999/?year=&amp;field=broadband">
-      <provider selected="true" editor-type-id="httpFileEditor">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jquerylibs/css/smoothness/jquery-ui-1.10.2.custom.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="49" column="4" selection-start="2528" selection-end="2528" vertical-scroll-proportion="-17.507599">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/oldAndTest/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="77" column="11" selection-start="1340" selection-end="1340" vertical-scroll-proportion="0.73770493" />
@@ -539,9 +425,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/oldAndTest/main.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="7" selection-start="411" selection-end="411" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="18" column="7" selection-start="411" selection-end="411" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/oldAndTest/map.html">
@@ -551,11 +435,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/oldAndTest/map4.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="122" column="9" selection-start="4487" selection-end="4487" vertical-scroll-proportion="0.0">
@@ -563,54 +442,82 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="12" selection-start="125" selection-end="125" vertical-scroll-proportion="0.28481013" />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/oldAndTest/colorTest.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="75" selection-start="216" selection-end="216" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="8" column="75" selection-start="216" selection-end="216" vertical-scroll-proportion="0.033333335" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/oldAndTest/barrels.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="90" column="3" selection-start="2608" selection-end="2609" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jquerylibs/js/jquery-ui-1.10.2.custom.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10655" column="32" selection-start="326426" selection-end="326426" vertical-scroll-proportion="0.0">
+        <state line="90" column="3" selection-start="2608" selection-end="2609" vertical-scroll-proportion="0.6">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/jquerylibs/js/jquery-1.9.1.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1041" column="0" selection-start="26270" selection-end="26270" vertical-scroll-proportion="0.0">
+        <state line="1041" column="0" selection-start="26270" selection-end="26270" vertical-scroll-proportion="0.03253796">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/map5.js">
+    <entry file="file://$PROJECT_DIR$/jquerylibs/js/jquery-ui-1.10.2.custom.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="40" selection-start="934" selection-end="934" vertical-scroll-proportion="-17.4">
+        <state line="10655" column="32" selection-start="326426" selection-end="326426" vertical-scroll-proportion="0.03253796">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/map5.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="70" column="23" selection-start="1847" selection-end="1847" vertical-scroll-proportion="-11.875">
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+        <state line="122" column="31" selection-start="4334" selection-end="4334" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/style.css">
+    <entry file="file://$PROJECT_DIR$/data/jsonMugger.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="12" selection-start="125" selection-end="125" vertical-scroll-proportion="0.29933482">
+        <state line="10" column="12" selection-start="158" selection-end="563" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/rawData">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="16" selection-start="2732394" selection-end="2732394" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/oldAndTest/test.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/rs_data.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="123" selection-start="125" selection-end="125" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/map5.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="76" column="30" selection-start="3023" selection-end="3028" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/oldAndTest/indicator.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="8" selection-start="299" selection-end="299" vertical-scroll-proportion="0.53333336">
           <folding />
         </state>
       </provider>
