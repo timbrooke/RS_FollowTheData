@@ -70,7 +70,7 @@
 
         .legendHolder {
             margin: auto;
-            padding: 5px;
+            padding: 10px 5px 5px 5px;
             max-width: 365px;
         }
     </style>
@@ -109,11 +109,6 @@
                 <option value='btu_total_production'>Total oil, gas and coal production in BTU</option>
                 <option value='us_total_production'>Total oil, gas and coal production in US$</option>
             </select>
-
-            <div class="legendHolder">
-                <img src="imgs/blu_gradient.png" alt="legend" class="legend">
-            </div>
-
         </div>
     </div>
     <div class="map rightMap">
@@ -138,10 +133,6 @@
                 <option value="gdp">Income per person</option>
                 <option value="unemployment">Long term unemployment</option>
             </select>
-
-            <div class="legendHolder">
-                <img src="imgs/green.png" alt="legend" class="legend">
-            </div>
         </div>
     </div>
     <div class="yearHolder">
@@ -150,12 +141,26 @@
         <p>&nbsp;</p>
     </div>
     <div class="yearSliderHolder">
-
         <div id="timeSlider" class="yearSlider"></div>
-
-
     </div>
+    <div class="mapColumn">
+    </div>
+    <div class="map leftMap">
 
+        <div class="mapColumn">
+            <div class="legendHolder">
+                <img src="imgs/blu_gradient.png" alt="legend" class="legend">
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="map rightMap">
+    <div class="mapColumn">
+        <div class="legendHolder">
+            <img src="imgs/green.png" alt="legend" class="legend">
+        </div>
+    </div>
+    </div>
 
 </div>
 </body>
