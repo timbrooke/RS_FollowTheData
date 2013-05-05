@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Barrels</title>
+    <link href="jquerylibs/css/smoothness/jquery-ui-1.10.2.custom.css" rel="stylesheet">
+    <style>
+        .slider {
+            margin: 10px;
+        }
+    </style>
+    <script src="jquerylibs/js/jquery-1.9.1.js"></script>
+    <script src="jquerylibs/js/jquery-ui-1.10.2.custom.js"></script>
+    <script src="libs/createjs-2013.02.12.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            var canvas, stage;
+            canvas = document.getElementById('drawingArea');
+            stage = new createjs.Stage(canvas);
+
+            stage.mouseEventsEnabled = true;
+
+            $("#slider01").slider({
+                value: 2005,
+                min: 2000,
+                max: 2010,
+                step: 1,
+                slide: function (event, ui) {
+                    $("#amount").html(ui.value);
+                    var index = (ui.value - 2000);
+                    showDataForIndex(index);
+                }
+            });
+
+            function showDataForIndex(index){
+                var v = data[index]/2500.0;
+                console.log(v);
+                drawCircles(v*100);
+                drawCircle2(v);
+                stage.update();
+            }
+            $("#amount").html($("#slider01").slider("value"));
+
+            var c = new createjs.Shape();
+            stage.addChild(c);
+
+            var c2 = new createjs.Shape();
+            stage.addChild(c2);
+            c2.x = 400;
+            c2.y = 180;
+
+
+            function drawCircle2(n){
+                c2.graphics.clear();
+                c2.graphics.beginFill("#4444AA").drawCircle(0,0,80*n);
+            }
+
+            function drawCircles(n) {
+                var col, row;
+
+                var circleSize = 6;
+                var spacing = circleSize * 3;
+                c.graphics.clear();
+                for (var i = 0; i < n; i++) {
+                    col = i % 10;
+                    row = Math.floor(i / 10);
+                    c.graphics.beginFill("#ff0000").drawCircle(spacing + col * spacing, 15 * spacing - row * spacing, circleSize);
+                }
+
+            }
+
+            var data = [2169.13511,
+                2261.41605,
+                2123.32298,
+                2278.59203,
+                2331.69623,
+                2630.86027,
+                2442.25006,
+                2352.75555,
+                2168.86528,
+                2212.18016,
+                2459.40356];
+
+            showDataForIndex(0);
+            stage.update();
+
+
+
+        });
+    </script>
+</head>
+<body>
+<canvas id="drawingArea" width="480" height="320"></canvas>
+<div id="amount"></div>
+<div id="slider01" class="slider"></div>
+</body>
+</html>
