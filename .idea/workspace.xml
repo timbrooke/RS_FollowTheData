@@ -1,17 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f4165c8a-1128-4d57-99d2-02dd879cef84" name="Default" comment="" />
+    <list default="true" id="f4165c8a-1128-4d57-99d2-02dd879cef84" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/map5.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/map5.html" afterPath="$PROJECT_DIR$/map5.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
     <ignored path="RewiredStateFollowTheData.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/main.html" changelist="f4165c8a-1128-4d57-99d2-02dd879cef84" time="1367678405011" ignored="false" />
     <file path="/map.html" changelist="f4165c8a-1128-4d57-99d2-02dd879cef84" time="1367701218408" ignored="false" />
     <file path="/barrels.html" changelist="f4165c8a-1128-4d57-99d2-02dd879cef84" time="1367707392805" ignored="false" />
-    <file path="/Dummy.txt" changelist="f4165c8a-1128-4d57-99d2-02dd879cef84" time="1367758174424" ignored="false" />
+    <file path="/Dummy.txt" changelist="f4165c8a-1128-4d57-99d2-02dd879cef84" time="1367760806898" ignored="false" />
     <file path="/map4.html" changelist="f4165c8a-1128-4d57-99d2-02dd879cef84" time="1367747294080" ignored="false" />
-    <file path="/map5.html" changelist="f4165c8a-1128-4d57-99d2-02dd879cef84" time="1367758084911" ignored="false" />
+    <file path="/map5.html" changelist="f4165c8a-1128-4d57-99d2-02dd879cef84" time="1367758494381" ignored="false" />
     <file path="/colorTest.html" changelist="f4165c8a-1128-4d57-99d2-02dd879cef84" time="1367750954272" ignored="false" />
-    <file path="$PROJECT_DIR$/.idea/workspace.xml" changelist="f4165c8a-1128-4d57-99d2-02dd879cef84" time="1367758161847" ignored="false" />
+    <file path="/map5.js" changelist="f4165c8a-1128-4d57-99d2-02dd879cef84" time="1367761694738" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,28 +38,26 @@
       <file leaf-file-name="map4.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/oldAndTest/map4.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="122" column="9" selection-start="4487" selection-end="4487" vertical-scroll-proportion="-4.2040815">
-              <folding>
-                <element signature="n#style#0;n#select#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#select#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#5;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <marker date="1367755866000" expanded="true" signature="6897:7142" placeholder="{...}" />
-                <marker date="1367755866000" expanded="true" signature="6993:7091" placeholder="{...}" />
-              </folding>
+            <state line="122" column="9" selection-start="4487" selection-end="4487" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="map5.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="map5.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/map5.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="68" column="8" selection-start="1599" selection-end="1599" vertical-scroll-proportion="0.6456693">
-              <folding>
-                <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
+            <state line="133" column="21" selection-start="5067" selection-end="5067" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="map5.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/map5.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="29" column="40" selection-start="934" selection-end="934" vertical-scroll-proportion="0.62168676">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -63,16 +65,7 @@
       <file leaf-file-name="colorTest.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/oldAndTest/colorTest.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="75" selection-start="216" selection-end="216" vertical-scroll-proportion="-5.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="jquery-ui-1.10.2.custom.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/jquerylibs/js/jquery-ui-1.10.2.custom.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="400" column="37" selection-start="11636" selection-end="11636" vertical-scroll-proportion="0.0">
+            <state line="8" column="75" selection-start="216" selection-end="216" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -81,7 +74,7 @@
       <file leaf-file-name="barrels.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/oldAndTest/barrels.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="90" column="3" selection-start="2608" selection-end="2609" vertical-scroll-proportion="-27.55102">
+            <state line="90" column="3" selection-start="2608" selection-end="2609" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -97,7 +90,16 @@
       <file leaf-file-name="main.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/oldAndTest/main.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="7" selection-start="411" selection-end="411" vertical-scroll-proportion="-10.458333">
+            <state line="18" column="7" selection-start="411" selection-end="411" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="jquery-1.9.1.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/jquerylibs/js/jquery-1.9.1.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="1041" column="0" selection-start="26270" selection-end="26270" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -112,10 +114,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="jquery-1.9.1.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/jquerylibs/js/jquery-1.9.1.js">
+      <file leaf-file-name="jquery-ui-1.10.2.custom.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/jquerylibs/js/jquery-ui-1.10.2.custom.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7719" column="0" selection-start="216012" selection-end="216012" vertical-scroll-proportion="0.0">
+            <state line="10655" column="32" selection-start="326426" selection-end="326426" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -147,6 +149,7 @@
         <option value="$PROJECT_DIR$/map4.html" />
         <option value="$PROJECT_DIR$/colorTest.html" />
         <option value="$PROJECT_DIR$/map5.html" />
+        <option value="$PROJECT_DIR$/src/map5.js" />
       </list>
     </option>
   </component>
@@ -182,6 +185,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -200,9 +204,22 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="RewiredStateFollowTheData" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="RewiredStateFollowTheData" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -363,24 +380,24 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1440" height="801" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25466284" sideWeight="0.5770925" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.4229075" sideWeight="0.60329986" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26183644" sideWeight="0.73792094" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26207906" sideWeight="0.60329986" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.4229075" sideWeight="0.39670014" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26207906" sideWeight="0.39670014" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -453,21 +470,13 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/map5.html</url>
-          <line>157</line>
           <option name="timeStamp" value="7" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="8" />
+      <option name="time" value="16" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/jquerylibs/css/smoothness/jquery-ui-1.10.2.custom.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="49" column="4" selection-start="2528" selection-end="2528" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/oldAndTest/heatMap.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="27" column="39" selection-start="963" selection-end="1023" vertical-scroll-proportion="0.0">
@@ -484,9 +493,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/libs/d3.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="http://172.16.3.8:9999/?year=&amp;field=broadband">
@@ -496,21 +503,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/jquerylibs/css/smoothness/jquery-ui-1.10.2.custom.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="49" column="4" selection-start="2528" selection-end="2528" vertical-scroll-proportion="-17.507599">
-          <folding />
-        </state>
+        <state line="49" column="4" selection-start="2528" selection-end="2528" vertical-scroll-proportion="-17.507599" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/oldAndTest/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="77" column="11" selection-start="1340" selection-end="1340" vertical-scroll-proportion="0.73770493">
-          <folding />
-        </state>
+        <state line="77" column="11" selection-start="1340" selection-end="1340" vertical-scroll-proportion="0.73770493" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/oldAndTest/main.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="7" selection-start="411" selection-end="411" vertical-scroll-proportion="-10.458333">
+        <state line="18" column="7" selection-start="411" selection-end="411" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -524,61 +527,55 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jquerylibs/js/jquery-1.9.1.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7719" column="0" selection-start="216012" selection-end="216012" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/oldAndTest/map4.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="122" column="9" selection-start="4487" selection-end="4487" vertical-scroll-proportion="-4.2040815">
-          <folding>
-            <element signature="n#style#0;n#select#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#select#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#5;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <marker date="1367755866000" expanded="true" signature="6897:7142" placeholder="{...}" />
-            <marker date="1367755866000" expanded="true" signature="6993:7091" placeholder="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jquerylibs/js/jquery-ui-1.10.2.custom.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="400" column="37" selection-start="11636" selection-end="11636" vertical-scroll-proportion="0.0">
+        <state line="122" column="9" selection-start="4487" selection-end="4487" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/oldAndTest/colorTest.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="75" selection-start="216" selection-end="216" vertical-scroll-proportion="-5.0">
+        <state line="8" column="75" selection-start="216" selection-end="216" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/oldAndTest/barrels.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="90" column="3" selection-start="2608" selection-end="2609" vertical-scroll-proportion="-27.55102">
+        <state line="90" column="3" selection-start="2608" selection-end="2609" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jquerylibs/js/jquery-ui-1.10.2.custom.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10655" column="32" selection-start="326426" selection-end="326426" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jquerylibs/js/jquery-1.9.1.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1041" column="0" selection-start="26270" selection-end="26270" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/map5.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="68" column="8" selection-start="1599" selection-end="1599" vertical-scroll-proportion="0.6456693">
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+        <state line="133" column="21" selection-start="5067" selection-end="5067" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/map5.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="40" selection-start="934" selection-end="934" vertical-scroll-proportion="0.62168676">
+          <folding />
         </state>
       </provider>
     </entry>
