@@ -58,6 +58,11 @@
         width: 100%;
     }
 
+    .yearHolder {
+        padding: 10px 10px 0px 10px;
+        /* background-color: blue; */
+    }
+
     body {
         font-family: Arial, Helvetica, sans-serif;
     }
@@ -117,7 +122,10 @@ function fullReloadData() {
         "out_of_school": "Primary children out of school",
         "roads": "Roads paved",
         "gdp": "Income per person",
-        "unemployment": "Long term unemployment"};
+        "unemployment": "Long term unemployment",
+        'btu_total_production': 'Total oil, gas and coal production in BTU',
+        'us_total_production': 'Total oil, gas and coal production in US$'
+    };
 
     var fieldName = document.getElementById('sort').value;
     //var titleText = $("#sort").text()[0];
@@ -385,6 +393,8 @@ function hsv2rgb(h, s, v) {
                 <option value="roads">Roads paved</option>
                 <option value="gdp">Income per person</option>
                 <option value="unemployment">Long term unemployment</option>
+                <option value='btu_total_production'>Total oil, gas and coal production in BTU</option>
+                <option value='us_total_production'>Total oil, gas and coal production in US$</option>
             </select>
 
         </div>
@@ -413,11 +423,16 @@ function hsv2rgb(h, s, v) {
             </select>
         </div>
     </div>
-
-    <div class="yearSliderHolder">
-        <div id="timeSlider" class="yearSlider"></div>
+    <div class="yearHolder">
         <div class="val" style=" float:left;">Year:</div>
         <div id="amount" style=" float:left;">2000</div>
+        <p>&nbsp;</p>
+    </div>
+    <div class="yearSliderHolder">
+
+        <div id="timeSlider" class="yearSlider"></div>
+
+
     </div>
 
 
