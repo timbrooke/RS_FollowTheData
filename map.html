@@ -21,6 +21,14 @@
     <script type="text/javascript">
         var map;
 
+        function numToHex(num){
+            var str = num.toString(16);
+            if(str.length<2){
+                str = "0"+str;
+            }
+            return str;
+        }
+
         AmCharts.ready(function() {
             map = new AmCharts.AmMap();
             map.pathToImages = "ammap/images/";
@@ -32,9 +40,11 @@
                 mapVar: AmCharts.maps.worldLow,
                 getAreasFromMap:true,
                 areas:[
-                    {id: "GB", value: 0},
-                    {id: "IT", value: 1000}
-                ]
+                    {id: "GB", color:"#FF00FF"},
+
+
+                ],
+                color:"#009900"
             };
 
             map.areasSettings = {
@@ -57,9 +67,10 @@
                 step: 1,
                 slide: function( event, ui ) {
                     $( "#amount" ).html(ui.value );
-                    dataProvider.areas[0].value = (ui.value - 2000) * 100;
+                    //dataProvider.areas[0].value = (ui.value - 2000) * 25;
                     console.log("value:"+dataProvider.areas[0].value);
                     //console.log("id:"+dataProvider.areas[0].id);
+                    dataProvider.areas[0].color = "#"+numToHex((ui.value - 2000) * 25)+"0000";
 
                     /*
                     dataProvider.areas =
