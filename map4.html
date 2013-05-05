@@ -15,424 +15,296 @@
 <link rel="stylesheet" href="jquerylibs/css/smoothness/jquery-ui-1.10.2.custom.css">
 <link rel="stylesheet" href="style.css">
 
+<style>
+
+    .map {
+        width: 50%;
+        background-color:#EEEEEE;
+        padding: 0px;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+
+    .mapHolder {
+        height:500px;
+    }
+
+    .leftMap {
+        float:left;
+    }
+
+    .rightMap {
+        float:right;
+    }
+</style>
+
 <script src="jquerylibs/js/jquery-1.9.1.js"></script>
 <script src="jquerylibs/js/jquery-ui-1.10.2.custom.js"></script>
 
 
 <script type="text/javascript">
-var map;
-var map2;
-var dataProvider;
-var dataProvider2;
+    var map;
+    var map2;
+    var dataProvider;
+    var dataProvider2;
 
-function reloadData() {
+    var sectionData;
 
+    function reloadData() {
 
-    $.ajax({
-        //  url :  "http://172.16.3.8:9999/?year=2000&field=oil",
-
-        url: "http://172.16.3.8:9999/?year=" + document.getElementById('amount').innerHTML + "&field=" + document.getElementById('sort').value,
-        type: 'get',
-        dataType: 'json',
-        success: function (data) {
-            dataProvider.areas = [];
-            $.each(data, function (i, user) {
-                dataProvider.areas.push({id: "" + user.id, value: user.value, description: user.description});
-            });
-            if (document.getElementById('sort').value == "oil") {
-                var valueLegend = new AmCharts.ValueLegend();
-                valueLegend.right = 10;
-                valueLegend.width = 300,
-                        valueLegend.minValue = "little oil prdouction";
-                valueLegend.maxValue = "huge oil production";
-                map.valueLegend = valueLegend;
-                map.title = "Oil";
-            }
-            else if (document.getElementById('sort').value == "broadband") {
-                var valueLegend = new AmCharts.ValueLegend();
-                valueLegend.right = 10;
-                valueLegend.width = 300;
-                valueLegend.minValue = "less broadband";
-                valueLegend.maxValue = "plenty broadband";
-                map.valueLegend = valueLegend;
-            }
-            else if (document.getElementById('sort').value == "population") {
-                var valueLegend = new AmCharts.ValueLegend();
-                valueLegend.right = 10;
-                valueLegend.width = 300,
-                        valueLegend.minValue = "less population";
-                valueLegend.maxValue = "plenty population";
-                map.valueLegend = valueLegend;
-            }
-            else if (document.getElementById('sort').value == "life") {
-                var valueLegend = new AmCharts.ValueLegend();
-                valueLegend.right = 10;
-                valueLegend.width = 300,
-                        valueLegend.minValue = "less life";
-                valueLegend.maxValue = "long life";
-                map.valueLegend = valueLegend;
-            }
-            else if (document.getElementById('sort').value == "child") {
-                var valueLegend = new AmCharts.ValueLegend();
-                valueLegend.right = 10;
-                valueLegend.width = 300,
-                        valueLegend.minValue = "less child mortality";
-                valueLegend.maxValue = "huge child mortality";
-                map.valueLegend = valueLegend;
-            }
-            else if (document.getElementById('sort').value == "health") {
-                var valueLegend = new AmCharts.ValueLegend();
-                valueLegend.right = 10;
-                valueLegend.width = 300,
-                        valueLegend.minValue = "less Government expenditure";
-                valueLegend.maxValue = "huge Government expenditure";
-                map.valueLegend = valueLegend;
-            }
-            else if (document.getElementById('sort').value == "electricity") {
-                var valueLegend = new AmCharts.ValueLegend();
-                valueLegend.right = 10;
-                valueLegend.width = 300,
-                        valueLegend.minValue = "less use";
-                valueLegend.maxValue = "huge use";
-                map.valueLegend = valueLegend;
-            }
-            else if (document.getElementById('sort').value == "eiti_gov") {
-                var valueLegend = new AmCharts.ValueLegend();
-                valueLegend.right = 10;
-                valueLegend.width = 300,
-                        valueLegend.minValue = "less Government Revenue";
-                valueLegend.maxValue = "huge Government Revenue";
-                map.valueLegend = valueLegend;
-            }
-            else if (document.getElementById('sort').value == "eiti_company") {
-                var valueLegend = new AmCharts.ValueLegend();
-                valueLegend.right = 10;
-                valueLegend.width = 300,
-                        valueLegend.minValue = "less Government Revenue";
-                valueLegend.maxValue = "huge Government Revenue";
-                map.valueLegend = valueLegend;
-            }
-            else if (document.getElementById('sort').value == "gas") {
-                var valueLegend = new AmCharts.ValueLegend();
-                valueLegend.right = 10;
-                valueLegend.width = 300,
-                        valueLegend.minValue = "less gas production";
-                valueLegend.maxValue = "huge gas production";
-                map.valueLegend = valueLegend;
-            }
-            else if (document.getElementById('sort').value == "coal") {
-                var valueLegend = new AmCharts.ValueLegend();
-                valueLegend.right = 10;
-                valueLegend.width = 300,
-                        valueLegend.minValue = "less coal production";
-                valueLegend.maxValue = "huge coal production";
-                map.valueLegend = valueLegend;
-            }
-            else if (document.getElementById('sort').value == "out_of_school") {
-                var valueLegend = new AmCharts.ValueLegend();
-                valueLegend.right = 10;
-                valueLegend.width = 300,
-                        valueLegend.minValue = "less primary child out";
-                valueLegend.maxValue = "lot primary child out";
-                map.valueLegend = valueLegend;
-            }
-            else if (document.getElementById('sort').value == "roads") {
-                var valueLegend = new AmCharts.ValueLegend();
-                valueLegend.right = 10;
-                valueLegend.width = 300,
-                        valueLegend.minValue = "less roads paved";
-                valueLegend.maxValue = "lot road paved";
-                map.valueLegend = valueLegend;
-            }
-            else if (document.getElementById('sort').value == "gdp") {
-                var valueLegend = new AmCharts.ValueLegend();
-                valueLegend.right = 10;
-                valueLegend.width = 300,
-                        valueLegend.minValue = "less gdp";
-                valueLegend.maxValue = "big gdp";
-                map.valueLegend = valueLegend;
-            }
-            else if (document.getElementById('sort').value == "unemployment") {
-                var valueLegend = new AmCharts.ValueLegend();
-                valueLegend.right = 10;
-                valueLegend.width = 300,
-                        valueLegend.minValue = "less unemployment";
-                valueLegend.maxValue = "huge unemployment";
-                map.valueLegend = valueLegend;
-            }
-
-            else {
-                var valueLegend = new AmCharts.ValueLegend();
-                map.valueLegend = valueLegend;
-            }
-            map.validateData();
-
+        function setLegend(minLabel, maxLabel) {
+            var valueLegend = new AmCharts.ValueLegend();
+            valueLegend.right = 10;
+            valueLegend.width = 300;
+            valueLegend.minValue = minLabel;
+            valueLegend.maxValue = maxLabel; //
+            map.valueLegend = valueLegend;
         }
-    });
 
 
-    /*$.getJSON(
-     //  "test.json",
+        $.ajax({
+            //  url :  "http://172.16.3.8:9999/?year=2000&field=oil",
 
-     "http://172.16.3.8:9999/?year=2000&field=oil"+"&callback=?",
-
-     function(data){
-     alert("length:" +data.length);
-     $.each(data, function(i,user){
-     alert(user.value);
-     dataProvider.areas.push({id:""+user.id,value:user.value,description:user.description});
-
-     map.validateData();
-
-     });
-     }
-     ); */
-
-
-}
-;
-
-
-function reloadData2() {
-
-
-    //  dataProvider2.areas.clear();
-    $.ajax({
-        //  url :  "http://172.16.3.8:9999/?year=2000&field=oil",
-
-        url: "http://172.16.3.8:9999/?year=" + document.getElementById('amount').innerHTML + "&field=" + document.getElementById('sort2').value,
-        type: 'get',
-        dataType: 'json',
-        success: function (data) {
-
-            dataProvider2.areas = [];
-
-
-            $.each(data, function (i, user) {
-                //  alert(user.value);
-                dataProvider2.areas.push({id: "" + user.id, value: user.value, description: user.description});
-
-
-            });
-
-
-            map2.validateData();
-
-        }
-    });
-
-
-    /*$.getJSON(
-     //  "test.json",
-
-     "http://172.16.3.8:9999/?year=2000&field=oil"+"&callback=?",
-
-     function(data){
-     alert("length:" +data.length);
-     $.each(data, function(i,user){
-     alert(user.value);
-     dataProvider.areas.push({id:""+user.id,value:user.value,description:user.description});
-
-     map.validateData();
-
-     });
-     }
-     ); */
-
-
-}
-;
-
-
-$(function () {
-
-
-    $("#sort").change(function (event) {
-        //alert("Click event on Select has occurred!");
-        $("option:selected", $(this)).each(function () {
-            var obj = document.getElementById('sort').value;
-            reloadData();
-            // alert("selected value"+obj);
-
+            url: "http://172.16.3.8:9999/?year=" + document.getElementById('amount').innerHTML + "&field=" + document.getElementById('sort').value,
+            type: 'get',
+            dataType: 'json',
+            success: function (data) {
+                dataProvider.areas = [];
+                $.each(data, function (i, user) {
+                    dataProvider.areas.push({id: "" + user.id, value: user.value, description: user.description});
+                });
+                switch (document.getElementById('sort').value) {
+                    case "oil":
+                        setLegend("little oil production", "huge oil production");
+                        break;
+                    case "broadband":
+                        setLegend("little broadband", "lots of broadband");
+                        break;
+                    case "population":
+                        setLegend("small population", "large population");
+                        break;
+                    case "life":
+                        setLegend("short life", "long life");
+                        break;
+                    case "child":
+                        setLegend("low child mortality", "high child mortality");
+                        break;
+                    case "health":
+                        setLegend("smaller government expenditure", "huge Government expenditure");
+                        break;
+                    case "electricity":
+                        setLegend("smaller use", "larger use");
+                        break;
+                    case "eiti_gov":
+                    case  "eiti_company":
+                        setLegend("small gov. revenue", "large gov. revenue");
+                        break;
+                    case  "gas":
+                        setLegend("small gas production", "large gas production");
+                        break;
+                    case "coal":
+                        setLegend("less coal production", "huge coal production");
+                        break;
+                    case "out_of_school":
+                        setLegend("less primary child out", "lot primary child out");
+                        break;
+                    case "roads":
+                        setLegend("less roads paved", "more roads paved");
+                        break;
+                    case "gdp":
+                        setLegend("less gdp", "big gdp");
+                        break;
+                    case "unemployment":
+                        setLegend("less unemployment", "huge unemployment");
+                        break;
+                    default :
+                        setLegend("", "");
+                }
+                map.validateData();
+            }
         });
-    });
-});
-
-$(function () {
-    $("#sort2").change(function (event) {
-        //alert("Click event on Select has occurred!");
-        $("option:selected", $(this)).each(function () {
-            var obj = document.getElementById('sort2').value;
-            reloadData2();
+    }
+    ;
 
 
+    function reloadData2() {
+        $.ajax({
+            //  url :  "http://172.16.3.8:9999/?year=2000&field=oil",
+
+            url: "http://172.16.3.8:9999/?year=" + document.getElementById('amount').innerHTML + "&field=" + document.getElementById('sort2').value,
+            type: 'get',
+            dataType: 'json',
+            success: function (data) {
+                dataProvider2.areas = [];
+                $.each(data, function (i, user) {
+                    dataProvider2.areas.push({id: "" + user.id, value: user.value, description: user.description});
+                });
+                map2.validateData();
+            }
         });
-    });
-});
-
-
-AmCharts.ready(function () {
-
-    map = new AmCharts.AmMap();
-
-    map.pathToImages = "ammap/images/";
-    //map.panEventsEnabled = true; // this line enables pinch-zooming and dragging on touch devices
-
-    map.colorSteps = 10;
-    map.balloon.color = "#000000";
-
-
-    //  var dataProvider = {
-
-
-    dataProvider = {     mapVar: AmCharts.maps.worldLow,
-
-
-        //       getAreasFromMap:true,
-        //    areas:[
-        //        {id: "GB", value: 0},
-        //        {id: "IT", value: 1000}
-        //     ]
-        areas: [],
-    };
-
-    dataProvider2 = {     mapVar: AmCharts.maps.worldLow,
-        //       getAreasFromMap:true,
-        //    areas:[
-        //        {id: "GB", value: 0},
-        //        {id: "IT", value: 1000}
-        //     ]
-        areas: [],
-    };
-
-
-    map2 = new AmCharts.AmMap();
-
-    map2.pathToImages = "ammap/images/";
-    //map.panEventsEnabled = true; // this line enables pinch-zooming and dragging on touch devices
-
-    map2.colorSteps = 10;
-    map2.balloon.color = "#000000";
-
-
-    map.areasSettings = {
-        autoZoom: true
-    };
-    map.dataProvider = dataProvider;
-
-    map.write("mapdiv");
-
-
-    map2.areasSettings = {
-        autoZoom: true
-    };
-    map2.dataProvider = dataProvider2;
-
-    map2.write("mapdiv2");
-
-    reloadData();
-    reloadData2();
-
-    var but = document.getElementById("button01");
-    but.onclick = function () {
-        dataProvider.areas.push({id: "US", value: 5000000});
-        map.validateData();
     }
 
-    $("#timeSlider").slider({
-        value: 2000,
-        min: 2000,
-        max: 2010,
-        step: 1,
-        slide: function (event, ui) {
-            $("#amount").html(ui.value);
-            dataProvider.areas[0].value = (ui.value - 2000) * 100;
-            console.log("value:" + dataProvider.areas[0].value);
-            //console.log("id:"+dataProvider.areas[0].id);
 
-            /*
-             dataProvider.areas =
-             [
-             {id: "GB", value: 10000},
-             {id: "IT", value: 12000}
-             ]
-             */
-            map.validateData();
-            map2.validateData();
-
-
-            reloadData();
-            reloadData2();
-        }
+    $(function () {
+        $("#sort").change(function (event) {
+            $("option:selected", $(this)).each(function () {
+                var obj = document.getElementById('sort').value;
+                reloadData();
+            });
+        });
     });
-    $("#amount").html($("#timeSlider").slider("value"));
+
+    $(function () {
+        $("#sort2").change(function (event) {
+            //alert("Click event on Select has occurred!");
+            $("option:selected", $(this)).each(function () {
+                var obj = document.getElementById('sort2').value;
+                reloadData2();
 
 
-});
+            });
+        });
+    });
+
+
+    AmCharts.ready(function () {
+
+        map = new AmCharts.AmMap();
+
+        map.pathToImages = "ammap/images/";
+        //map.panEventsEnabled = true; // this line enables pinch-zooming and dragging on touch devices
+
+        map.colorSteps = 10;
+        map.balloon.color = "#000000";
+
+        dataProvider = {     mapVar: AmCharts.maps.worldLow,
+            areas: []
+        };
+
+        dataProvider2 = {     mapVar: AmCharts.maps.worldLow,
+            areas: []
+        };
+
+        map2 = new AmCharts.AmMap();
+
+        map2.pathToImages = "ammap/images/";
+        //map.panEventsEnabled = true; // this line enables pinch-zooming and dragging on touch devices
+
+        map2.colorSteps = 10;
+        map2.balloon.color = "#000000";
+
+        map.areasSettings = {
+            autoZoom: true
+        };
+        map.dataProvider = dataProvider;
+
+        map.write("mapdiv");
+
+        map2.areasSettings = {
+            autoZoom: true
+        };
+        map2.dataProvider = dataProvider2;
+
+        map2.write("mapdiv2");
+
+        reloadData();
+        reloadData2();
+
+        var but = document.getElementById("button01");
+        but.onclick = function () {
+            dataProvider.areas.push({id: "US", value: 5000000});
+            map.validateData();
+        }
+
+        $("#timeSlider").slider({
+            value: 2000,
+            min: 2000,
+            max: 2010,
+            step: 1,
+            slide: function (event, ui) {
+                $("#amount").html(ui.value);
+                dataProvider.areas[0].value = (ui.value - 2000) * 100;
+                map.validateData();
+                map2.validateData();
+                reloadData();
+                reloadData2();
+            }
+        });
+        $("#amount").html($("#timeSlider").slider("value"));
+    });
 </script>
 </head>
 
 <body>
-<div id="mapdiv" style=" float:left;width: 50%; background-color:#EEEEEE; height: 500px;"></div>
-<div id="mapdiv2" style=" float: right;width: 49%; background-color:#EEEEEE; height: 500px;"></div>
-<!-- <select name="sort" id="sort" style="float:left;margin-bottom:20px; width: 50%;">
-  <option value="oil" selected="selected">oil</option>
-  <option>Coffee</option>
-  <option>Tea</option>
-</select>  -->
+<div class="wrapper">
+    <div class="map leftMap">
+        <div id="mapdiv" class="mapHolder"></div>
+    </div>
+    <div class="map rightMap">
+        <div id="mapdiv2" class="mapHolder"></div>
+    </div>
 
-<select name="sort" id="sort" style="float:left;margin-bottom:20px; width: 50%;">
-    <option value="broadband">Fixed broadband Internet subscribers</option>
-    <option value="population">Total population</option>
-    <option value="life">Life expectancy at birth</option>
-    <option value="child">Child mortality</option>
-    <option value="health">Government expenditure on health per-capita</option>
-    <option value="electricity">Electricity use per-capita</option>
-    <option value="eiti_gov">Government Revenue (as reported by Government</option>
-    <option value="eiti_company">Government Revenue (as reported by Companies)</option>
-    <option value="gas">Gross Natural Gas Production</option>
-    <option value="oil">Total Oil Supply</option>
-    <option value="coal">Total Primary Coal Production</option>
-    <option value="out_of_school">Primary children out of school</option>
-    <option value="roads">Roads paved</option>
-    <option value="gdp">Income per person</option>
-    <option value="unemployment">Long term unemployment</option>
-</select>
+    <!-- <select name="sort" id="sort" style="float:left;margin-bottom:20px; width: 50%;">
+      <option value="oil" selected="selected">oil</option>
+      <option>Coffee</option>
+      <option>Tea</option>
+    </select>  -->
 
-<!--
-<select  name="sort2" id="sort2" style="float:right;margin-bottom:20px; width: 49%;">
-  <option selected>Milk</option>
-  <option>Coffee</option>
-  <option>Tea</option>
-</select>
--->
+    <select name="sort" id="sort" style="float:left;margin-bottom:20px; width: 50%;">
+        <option value="broadband">Fixed broadband Internet subscribers</option>
+        <option value="population">Total population</option>
+        <option value="life">Life expectancy at birth</option>
+        <option value="child">Child mortality</option>
+        <option value="health">Government expenditure on health per-capita</option>
+        <option value="electricity">Electricity use per-capita</option>
+        <option value="eiti_gov">Government Revenue (as reported by Government</option>
+        <option value="eiti_company">Government Revenue (as reported by Companies)</option>
+        <option value="gas">Gross Natural Gas Production</option>
+        <option value="oil">Total Oil Supply</option>
+        <option value="coal">Total Primary Coal Production</option>
+        <option value="out_of_school">Primary children out of school</option>
+        <option value="roads">Roads paved</option>
+        <option value="gdp">Income per person</option>
+        <option value="unemployment">Long term unemployment</option>
+    </select>
 
-<select name="sort2" id="sort2" style="float:left;margin-bottom:20px; width: 50%;">
-    <option value="broadband">Fixed broadband Internet subscribers</option>
-    <option value="population">Total population</option>
-    <option value="life">Life expectancy at birth</option>
-    <option value="child">Child mortality</option>
-    <option value="health">Government expenditure on health per-capita</option>
-    <option value="electricity">Electricity use per-capita</option>
-    <option value="eiti_gov">Government Revenue (as reported by Government)</option>
-    <option value="eiti_company">Government Revenue (as reported by Companies)</option>
-    <option value="gas">Gross Natural Gas Production</option>
-    <option value="oil">Total Oil Supply</option>
-    <option value="coal">Total Primary Coal Production</option>
-    <option value="out_of_school">Primary children out of school</option>
-    <option value="roads">Roads paved</option>
-    <option value="gdp">Income per person</option>
-    <option value="unemployment">Long term unemployment</option>
-</select>
+    <!--
+    <select  name="sort2" id="sort2" style="float:right;margin-bottom:20px; width: 49%;">
+      <option selected>Milk</option>
+      <option>Coffee</option>
+      <option>Tea</option>
+    </select>
+    -->
+
+    <select name="sort2" id="sort2" style="float:left;margin-bottom:20px; width: 50%;">
+        <option value="broadband">Fixed broadband Internet subscribers</option>
+        <option value="population">Total population</option>
+        <option value="life">Life expectancy at birth</option>
+        <option value="child">Child mortality</option>
+        <option value="health">Government expenditure on health per-capita</option>
+        <option value="electricity">Electricity use per-capita</option>
+        <option value="eiti_gov">Government Revenue (as reported by Government)</option>
+        <option value="eiti_company">Government Revenue (as reported by Companies)</option>
+        <option value="gas">Gross Natural Gas Production</option>
+        <option value="oil">Total Oil Supply</option>
+        <option value="coal">Total Primary Coal Production</option>
+        <option value="out_of_school">Primary children out of school</option>
+        <option value="roads">Roads paved</option>
+        <option value="gdp">Income per person</option>
+        <option value="unemployment">Long term unemployment</option>
+    </select>
 
 
-<div id="chartdiv" style="width: 200px; height: 150px; position: absolute; bottom: 0; right: 0; z-index: 100;"></div>
-<div id="timeSlider"></div>
-<div class="val" style=" float:left;">Year:</div>
-<div id="amount" style=" float:left;"></div>
+    <div id="chartdiv"
+         style="width: 200px; height: 150px; position: absolute; bottom: 0; right: 0; z-index: 100;"></div>
+    <div id="timeSlider"></div>
+    <div class="val" style=" float:left;">Year:</div>
+    <div id="amount" style=" float:left;"></div>
 
-<br/>
-<button id="button01">DO SOMETHING</button>
+    <br/>
+    <button id="button01">DO SOMETHING</button>
+</div>
 </body>
 
 </html>
