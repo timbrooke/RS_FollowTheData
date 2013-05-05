@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+
+    <script src="../jquerylibs/js/jquery-1.9.1.js"></script>
+    <script>
+
+
+        var names = [
+            "broadband",
+            "population",
+            "life",
+            "child",
+            "health",
+            "electricity",
+            "eiti_gov",
+            "eiti_company",
+            "gas",
+            "oil",
+            "coal",
+            "out_of_school",
+            "roads",
+            "gdp",
+            "unemployment",
+            'btu_total_production',
+            'us_total_production'
+        ];
+
+
+        $(document).ready(function () {
+            var fieldName;
+            var result = "";
+            for (var i = 0; i < names.length; i++) {
+                fieldName = names[i];
+
+                console.log("Hello");
+                var local = fieldName;
+
+                $.ajax({
+                    url: "http://172.16.3.8:9999/new?field=" + local,
+                    type: 'get',
+                    dataType: 'json',
+                    success: function (data) {
+                        //var jsonData = JSON.parse(data);
+                        //console.log(jsonData.stringify());
+                        console.log(fieldName + ":" + JSON.stringify(data));
+                        console.log("Moo");
+                        result += JSON.stringify(data)+"<br>";
+                        $("#result").html(result);
+                    }
+                });
+            }
+        });
+    </script>
+</head>
+<body>
+<div id="result">Quack</div>
+</body>
+</html>
