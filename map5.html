@@ -18,20 +18,48 @@
 <style>
     .map {
         width: 50%;
-        background-color: #EEEEEE;
-        padding: 0px;
         -moz-box-sizing: border-box;
         -webkit-box-sizing: border-box;
         box-sizing: border-box;
     }
-    .mapHolder {
-        height: 500px;
+
+    .mapColumn {
+        margin: 10px;
     }
+
+    .mapHolder {
+
+        height: 500px;
+        background-color: #EEEEEE;
+    }
+
     .leftMap {
         float: left;
     }
+
     .rightMap {
         float: right;
+    }
+
+    .selectionBox {
+        width: 100%;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .yearSliderHolder {
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        margin: 10px;
+    }
+
+    .yearSlider {
+        width: 100%;
+    }
+
+    body {
+        font-family: Arial, Helvetica, sans-serif;
     }
 </style>
 
@@ -48,38 +76,56 @@ var currentYear = 2000;
 
 var sectionData;
 
-function makeColorFromRGB(r,g,b){
+function makeColorFromRGB(r, g, b) {
     var num = r << 16 | g << 8 | b;
     var col = num.toString(16);
     var l = 6 - col.length;
-    for(var i=0;i<l;i++){
-        col = "0"+col;
+    for (var i = 0; i < l; i++) {
+        col = "0" + col;
     }
-    return "#"+col;
+    return "#" + col;
 }
 
-function updateYear(){
+function updateYear() {
     var year = document.getElementById('amount').innerHTML;
     var yearStr = year.toString();
-    //console.log("Year"+yearStr);
     dataProvider.areas = [];
-    console.log("START >>>>>")
     $.each(sectionData[yearStr], function (i, user) {
-
         var v = user.value;
-        console.log("v:"+v);
-        v = (v - sectionData.query.min)/(sectionData.query.max - sectionData.query.min);
-        var rgb = hsv2rgb(0.5,1.0,0.8 - (0.6*v));
-        var col = makeColorFromRGB(rgb["red"],rgb["green"],rgb["blue"]);
+        v = (v - sectionData.query.min) / (sectionData.query.max - sectionData.query.min);
+        var rgb = hsv2rgb(0.5, 1.0, 0.8 - (0.6 * v));
+        var col = makeColorFromRGB(rgb["red"], rgb["green"], rgb["blue"]);
         dataProvider.areas.push({id: "" + user.id, color: col, description: user.description});
     });
-    console.log("END <<<<<<<");
-    console.log("");
     map.validateNow();
 }
 
 function fullReloadData() {
+
+    var names = {
+        "broadband": "Fixed broadband Internet subscribers",
+        "population": "Total population",
+        "life": "Life expectancy at birth",
+        "child": "Child mortality",
+        "health": "Government expenditure on health per-capita",
+        "electricity": "Electricity use per-capita",
+        "eiti_gov": "Government Revenue (as reported by Government)",
+        "eiti_company": "Government Revenue (as reported by Companies)",
+        "gas": "Gross Natural Gas Production",
+        "oil": "Total Oil Supply",
+        "coal": "Total Primary Coal Production",
+        "out_of_school": "Primary children out of school",
+        "roads": "Roads paved",
+        "gdp": "Income per person",
+        "unemployment": "Long term unemployment"};
+
     var fieldName = document.getElementById('sort').value;
+    //var titleText = $("#sort").text()[0];
+    //console.log(titleText+" "+fieldName);
+    var titleText = names[fieldName];
+    $("#mapTitle01").html(titleText);
+
+
     var year = document.getElementById('amount').innerHTML; //$("#timeSlider").slider("value");
     dataProvider.areas = [];
     map.validateData();
@@ -92,13 +138,10 @@ function fullReloadData() {
         success: function (data) {
             sectionData = data;
             updateYear();
-            setLegendByField(fieldName);
+            //setLegendByField(fieldName);
             map.validateData();
         }
     });
-
-
-
 
 
     function setLegend(minLabel, maxLabel) {
@@ -205,6 +248,12 @@ $(function () {
 AmCharts.ready(function () {
 
     map = new AmCharts.AmMap();
+    map.areaSettings = {
+        rollOverColor: "#00FF00",
+        color: "#003333",
+        colorSolid: "#00CCCC",
+        selectedColor: "#0000CC"
+    }
 
     map.pathToImages = "ammap/images/";
     //map.panEventsEnabled = true; // this line enables pinch-zooming and dragging on touch devices
@@ -245,12 +294,6 @@ AmCharts.ready(function () {
     fullReloadData();
     reloadData2();
 
-    var but = document.getElementById("button01");
-    but.onclick = function () {
-        dataProvider.areas.push({id: "US", value: 5000000});
-        map.validateData();
-    }
-
     $("#timeSlider").slider({
         value: 2000,
         min: 2000,
@@ -262,134 +305,122 @@ AmCharts.ready(function () {
             console.log("updates");
             updateYear();
             reloadData2();
-
-
-
-
         }
     });
     $("#amount").html($("#timeSlider").slider("value"));
 });
 
-function hsv2rgb(h,s,v) {
+function hsv2rgb(h, s, v) {
 // Adapted from http://www.easyrgb.com/math.html
 // hsv values = 0 - 1, rgb values = 0 - 255
     var r, g, b;
     var RGB = new Array();
-    if(s==0){
-        RGB['red']=RGB['green']=RGB['blue']=Math.round(v*255);
-    }else{
+    if (s == 0) {
+        RGB['red'] = RGB['green'] = RGB['blue'] = Math.round(v * 255);
+    } else {
         // h must be < 1
         var var_h = h * 6;
-        if (var_h==6) var_h = 0;
+        if (var_h == 6) var_h = 0;
         //Or ... var_i = floor( var_h )
-        var var_i = Math.floor( var_h );
-        var var_1 = v*(1-s);
-        var var_2 = v*(1-s*(var_h-var_i));
-        var var_3 = v*(1-s*(1-(var_h-var_i)));
-        if(var_i==0){
+        var var_i = Math.floor(var_h);
+        var var_1 = v * (1 - s);
+        var var_2 = v * (1 - s * (var_h - var_i));
+        var var_3 = v * (1 - s * (1 - (var_h - var_i)));
+        if (var_i == 0) {
             var_r = v;
             var_g = var_3;
             var_b = var_1;
-        }else if(var_i==1){
+        } else if (var_i == 1) {
             var_r = var_2;
             var_g = v;
             var_b = var_1;
-        }else if(var_i==2){
+        } else if (var_i == 2) {
             var_r = var_1;
             var_g = v;
             var_b = var_3
-        }else if(var_i==3){
+        } else if (var_i == 3) {
             var_r = var_1;
             var_g = var_2;
             var_b = v;
-        }else if (var_i==4){
+        } else if (var_i == 4) {
             var_r = var_3;
             var_g = var_1;
             var_b = v;
-        }else{
+        } else {
             var_r = v;
             var_g = var_1;
             var_b = var_2
         }
         //rgb results = 0 ÷ 255
-        RGB['red']=Math.round(var_r * 255);
-        RGB['green']=Math.round(var_g * 255);
-        RGB['blue']=Math.round(var_b * 255);
+        RGB['red'] = Math.round(var_r * 255);
+        RGB['green'] = Math.round(var_g * 255);
+        RGB['blue'] = Math.round(var_b * 255);
     }
     return RGB;
-};
+}
+;
 </script>
 </head>
 
 <body>
 <div class="wrapper">
     <div class="map leftMap">
-        <div id="mapdiv" class="mapHolder"></div>
+        <div class="mapColumn">
+            <h2 id="mapTitle01">TItle of Map</h2>
+
+            <div id="mapdiv" class="mapHolder"></div>
+            <select name="sort" id="sort" class="selectionBox">
+                <option value="broadband">Fixed broadband Internet subscribers</option>
+                <option value="population">Total population</option>
+                <option value="life">Life expectancy at birth</option>
+                <option value="child">Child mortality</option>
+                <option value="health">Government expenditure on health per-capita</option>
+                <option value="electricity">Electricity use per-capita</option>
+                <option value="eiti_gov">Government Revenue (as reported by Government</option>
+                <option value="eiti_company">Government Revenue (as reported by Companies)</option>
+                <option value="gas">Gross Natural Gas Production</option>
+                <option value="oil">Total Oil Supply</option>
+                <option value="coal">Total Primary Coal Production</option>
+                <option value="out_of_school">Primary children out of school</option>
+                <option value="roads">Roads paved</option>
+                <option value="gdp">Income per person</option>
+                <option value="unemployment">Long term unemployment</option>
+            </select>
+
+        </div>
     </div>
     <div class="map rightMap">
-        <div id="mapdiv2" class="mapHolder"></div>
+        <div class="mapColumn">
+            <h2 id="mapTitle02">Title of Map</h2>
+
+            <div id="mapdiv2" class="mapHolder"></div>
+            <select name="sort2" id="sort2" class="selectionBox">
+                <option value="broadband">Fixed broadband Internet subscribers</option>
+                <option value="population">Total population</option>
+                <option value="life">Life expectancy at birth</option>
+                <option value="child">Child mortality</option>
+                <option value="health">Government expenditure on health per-capita</option>
+                <option value="electricity">Electricity use per-capita</option>
+                <option value="eiti_gov">Government Revenue (as reported by Government)</option>
+                <option value="eiti_company">Government Revenue (as reported by Companies)</option>
+                <option value="gas">Gross Natural Gas Production</option>
+                <option value="oil">Total Oil Supply</option>
+                <option value="coal">Total Primary Coal Production</option>
+                <option value="out_of_school">Primary children out of school</option>
+                <option value="roads">Roads paved</option>
+                <option value="gdp">Income per person</option>
+                <option value="unemployment">Long term unemployment</option>
+            </select>
+        </div>
     </div>
 
-    <!-- <select name="sort" id="sort" style="float:left;margin-bottom:20px; width: 50%;">
-      <option value="oil" selected="selected">oil</option>
-      <option>Coffee</option>
-      <option>Tea</option>
-    </select>  -->
-
-    <select name="sort" id="sort" style="float:left;margin-bottom:20px; width: 50%;">
-        <option value="broadband">Fixed broadband Internet subscribers</option>
-        <option value="population">Total population</option>
-        <option value="life">Life expectancy at birth</option>
-        <option value="child">Child mortality</option>
-        <option value="health">Government expenditure on health per-capita</option>
-        <option value="electricity">Electricity use per-capita</option>
-        <option value="eiti_gov">Government Revenue (as reported by Government</option>
-        <option value="eiti_company">Government Revenue (as reported by Companies)</option>
-        <option value="gas">Gross Natural Gas Production</option>
-        <option value="oil">Total Oil Supply</option>
-        <option value="coal">Total Primary Coal Production</option>
-        <option value="out_of_school">Primary children out of school</option>
-        <option value="roads">Roads paved</option>
-        <option value="gdp">Income per person</option>
-        <option value="unemployment">Long term unemployment</option>
-    </select>
-
-    <!--
-    <select  name="sort2" id="sort2" style="float:right;margin-bottom:20px; width: 49%;">
-      <option selected>Milk</option>
-      <option>Coffee</option>
-      <option>Tea</option>
-    </select>
-    -->
-
-    <select name="sort2" id="sort2" style="float:left;margin-bottom:20px; width: 50%;">
-        <option value="broadband">Fixed broadband Internet subscribers</option>
-        <option value="population">Total population</option>
-        <option value="life">Life expectancy at birth</option>
-        <option value="child">Child mortality</option>
-        <option value="health">Government expenditure on health per-capita</option>
-        <option value="electricity">Electricity use per-capita</option>
-        <option value="eiti_gov">Government Revenue (as reported by Government)</option>
-        <option value="eiti_company">Government Revenue (as reported by Companies)</option>
-        <option value="gas">Gross Natural Gas Production</option>
-        <option value="oil">Total Oil Supply</option>
-        <option value="coal">Total Primary Coal Production</option>
-        <option value="out_of_school">Primary children out of school</option>
-        <option value="roads">Roads paved</option>
-        <option value="gdp">Income per person</option>
-        <option value="unemployment">Long term unemployment</option>
-    </select>
+    <div class="yearSliderHolder">
+        <div id="timeSlider" class="yearSlider"></div>
+        <div class="val" style=" float:left;">Year:</div>
+        <div id="amount" style=" float:left;">2000</div>
+    </div>
 
 
-    <div id="chartdiv"
-         style="width: 200px; height: 150px; position: absolute; bottom: 0; right: 0; z-index: 100;"></div>
-    <div id="timeSlider"></div>
-    <div class="val" style=" float:left;">Year:</div>
-    <div id="amount" style=" float:left;">2000</div>
-
-    <br/>
-    <button id="button01">DO SOMETHING</button>
 </div>
 </body>
 
