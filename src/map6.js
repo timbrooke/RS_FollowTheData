@@ -3,30 +3,7 @@ $(document).ready(function () {
     var map2;
     var dataProvider;
     var dataProvider2;
-    var currentYear = 2000;
-    var theData;
-
-    var sectionDataMoo = [null, null];
-    loadAllData();
-
-
-    function loadAllData(){
-        console.log("ABOUT TO LOAD ALL DATA");
-        $.ajax({
-            url: "data/broadband.json",
-            type: 'get',
-            dataType: 'json',
-            error:function (jqXHR, textStatus, errorThrown ){
-                console.log("ERROR:"+textStatus+" "+errorThrown);
-            },
-            success: function (data) {
-                theData = data;
-                //updateYear();
-                //map.validateData();
-                console.log(theData);
-            }
-        });
-    }
+    var sectionsData = [null, null];
 
     function makeColorFromRGB(r, g, b) {
         var num = r << 16 | g << 8 | b;
@@ -40,19 +17,21 @@ $(document).ready(function () {
 
     function updateYear() {
         var year = document.getElementById('amount').innerHTML;
+        //DEBUG
+        console.log("Update year"+year);
         var yearStr = year.toString();
         dataProvider.areas = [];
         dataProvider2.areas = [];
         for (var mapId = 1; mapId < 3; mapId++) {
-            if (sectionDataMoo[mapId - 1] != null) {
-                var dataBlob = sectionDataMoo[mapId - 1][yearStr];
+            if (sectionsData[mapId - 1] != null) {
+                var dataBlob = sectionsData[mapId - 1][yearStr];
                 $.each(dataBlob, function (i, user) {
                     var v = user.value;
-                    v = (v - sectionDataMoo[mapId - 1].query.min) / (sectionDataMoo[mapId - 1].query.max - sectionDataMoo[mapId - 1].query.min);
+                    v = (v - sectionsData[mapId - 1].query.min) / (sectionsData[mapId - 1].query.max - sectionsData[mapId - 1].query.min);
                     var hue = mapId == 1 ? 0.5 : 0.25;
                     var rgb = hsv2rgb(hue, 1.0, 0.8 - (0.6 * v));
                     var col = makeColorFromRGB(rgb["red"], rgb["green"], rgb["blue"]);
-                    if(mapId==1){
+                    if (mapId == 1) {
                         dataProvider.areas.push({id: "" + user.id, color: col, description: user.description});
                     } else {
                         dataProvider2.areas.push({id: "" + user.id, color: col, description: user.description});
@@ -71,10 +50,10 @@ $(document).ready(function () {
             "population": "Total population",
             "life": "Life expectancy at birth",
             "child": "Child mortality",
-            "health": "Government expenditure on health per-capita",
+            "health": "Gov. expenditure on health per-capita",
             "electricity": "Electricity use per-capita",
-            "eiti_gov": "Government Revenue (as reported by Government)",
-            "eiti_company": "Government Revenue (as reported by Companies)",
+            "eiti_gov": "Gov. Revenue (as reported by Gov.)",
+            "eiti_company": "Gov. Revenue (as reported by Co.)",
             "gas": "Gross Natural Gas Production",
             "oil": "Total Oil Supply",
             "coal": "Total Primary Coal Production",
@@ -82,14 +61,12 @@ $(document).ready(function () {
             "roads": "Roads paved",
             "gdp": "Income per person",
             "unemployment": "Long term unemployment",
-            'btu_total_production': 'Total oil, gas and coal production in BTU',
-            'us_total_production': 'Total oil, gas and coal production in US$'
+            'btu_total_production': 'Oil, gas and coal production in BTU',
+            'us_total_production': 'Oil, gas and coal production in US$'
         };
 
         var fieldName;
         var titleText;
-
-        var year = document.getElementById('amount').innerHTML;
 
         if (mapId == 1) {
             fieldName = document.getElementById('sort').value;
@@ -98,11 +75,14 @@ $(document).ready(function () {
             dataProvider.areas = [];
             map.validateData();
             $.ajax({
-                url: "http://172.16.3.8:9999/new?field=" + fieldName,
+                //Mongo version call to database
+                //url: "http://172.16.3.8:9999/new?field=" + fieldName,
+                //Local json file version
+                url: "data/" + fieldName + ".json",
                 type: 'get',
                 dataType: 'json',
                 success: function (data) {
-                    sectionDataMoo[0] = data;
+                    sectionsData[0] = data;
                     updateYear();
                     //setLegendByField(fieldName);
                     //map.validateData();
@@ -115,13 +95,15 @@ $(document).ready(function () {
             dataProvider2.areas = [];
             map2.validateData();
             $.ajax({
-                url: "http://172.16.3.8:9999/new?field=" + fieldName,
+                //Mongo version call to database
+                //url: "http://172.16.3.8:9999/new?field=" + fieldName,
+                //Local json file version
+                url: "data/" + fieldName + ".json",
                 type: 'get',
                 dataType: 'json',
                 success: function (data) {
-                    sectionDataMoo[1] = data;
+                    sectionsData[1] = data;
                     updateYear();
-                    //map.validateData();
                 }
             });
         }
@@ -130,7 +112,6 @@ $(document).ready(function () {
     $(function () {
         $("#sort").change(function (event) {
             $("option:selected", $(this)).each(function () {
-                var obj = document.getElementById('sort').value;
                 fullReloadData(1);
             });
         });
@@ -152,7 +133,7 @@ $(document).ready(function () {
             color: "#003333",
             colorSolid: "#00CCCC",
             selectedColor: "#0000CC"
-        }
+        };
 
         map.pathToImages = "ammap/images/";
         //map.panEventsEnabled = true; // this line enables pinch-zooming and dragging on touch devices
@@ -171,7 +152,7 @@ $(document).ready(function () {
         map2 = new AmCharts.AmMap();
 
         map2.pathToImages = "ammap/images/";
-        //map.panEventsEnabled = true; // this line enables pinch-zooming and dragging on touch devices
+        map.panEventsEnabled = true; // this line enables pinch-zooming and dragging on touch devices
 
         map2.colorSteps = 10;
         map2.balloon.color = "#000000";
@@ -193,7 +174,9 @@ $(document).ready(function () {
         fullReloadData(1);
         fullReloadData(2);
 
-        $("#timeSlider").slider({
+        var $timeSlider = $("#timeSlider");
+
+        $timeSlider.slider({
             value: 2000,
             min: 2000,
             max: 2010,
@@ -206,14 +189,14 @@ $(document).ready(function () {
                 //reloadData2();
             }
         });
-        $("#amount").html($("#timeSlider").slider("value"));
+        $("#amount").html($timeSlider.slider("value"));
     });
 
     function hsv2rgb(h, s, v) {
 // Adapted from http://www.easyrgb.com/math.html
 // hsv values = 0 - 1, rgb values = 0 - 255
-        var r, g, b;
-        var RGB = new Array();
+
+        var RGB = [];
         if (s == 0) {
             RGB['red'] = RGB['green'] = RGB['blue'] = Math.round(v * 255);
         } else {
@@ -225,6 +208,7 @@ $(document).ready(function () {
             var var_1 = v * (1 - s);
             var var_2 = v * (1 - s * (var_h - var_i));
             var var_3 = v * (1 - s * (1 - (var_h - var_i)));
+            var var_r,var_g,var_b;
             if (var_i == 0) {
                 var_r = v;
                 var_g = var_3;
@@ -258,6 +242,7 @@ $(document).ready(function () {
         return RGB;
     }
 
+    /*
     function setLegend(minLabel, maxLabel) {
         var valueLegend = new AmCharts.ValueLegend();
         valueLegend.right = 10;
@@ -316,4 +301,5 @@ $(document).ready(function () {
                 setLegend("", "");
         }
     }
+    */
 });

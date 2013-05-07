@@ -1,0 +1,104 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+    <title>CompareTheMap.com</title>
+
+    <link rel="stylesheet" href="ammap/ammap.css" type="text/css">
+    <link rel="stylesheet" href="jquerylibs/css/smoothness/jquery-ui-1.10.2.custom.css">
+    <link rel="stylesheet" href="css/style6.css">
+
+    <script src="ammap/ammap.js" type="text/javascript"></script>
+    <script src="ammap/maps/js/worldLow.js" type="text/javascript"></script>
+    <script src="http://www.amcharts.com/lib/amcharts.js" type="text/javascript"></script>
+    <script src="jquerylibs/js/jquery-1.9.1.js"></script>
+    <script src="jquerylibs/js/jquery-ui-1.10.2.custom.js"></script>
+    <script src="src/map6.js" type="text/javascript"></script>
+</head>
+
+<body>
+<div class="wrapper">
+    <div class="map leftMap">
+        <div class="mapColumn">
+            <h2 id="mapTitle01">TItle of Map</h2>
+
+            <div id="mapdiv" class="mapHolder"></div>
+
+            <select name="sort" id="sort" class="selectionBox">
+                <option value="broadband">Fixed broadband Internet subscribers</option>
+                <option value="population">Total population</option>
+                <option value="life">Life expectancy at birth</option>
+                <option value="child">Child mortality</option>
+                <option value="health">Government expenditure on health per-capita</option>
+                <option value="electricity">Electricity use per-capita</option>
+                <option value="eiti_gov">Government Revenue (as reported by Government</option>
+                <option value="eiti_company">Government Revenue (as reported by Companies)</option>
+                <option value="gas">Gross Natural Gas Production</option>
+                <option value="oil">Total Oil Supply</option>
+                <option value="coal">Total Primary Coal Production</option>
+                <option value="out_of_school">Primary children out of school</option>
+                <option value="roads">Roads paved</option>
+                <option value="gdp">Income per person</option>
+                <option value="unemployment">Long term unemployment</option>
+                <option value='btu_total_production'>Total oil, gas and coal production in BTU</option>
+                <option value='us_total_production'>Total oil, gas and coal production in US$</option>
+            </select>
+        </div>
+    </div>
+    <div class="map rightMap">
+        <div class="mapColumn">
+            <h2 id="mapTitle02">Title of Map</h2>
+
+            <div id="mapdiv2" class="mapHolder"></div>
+            <select name="sort2" id="sort2" class="selectionBox">
+                <option value="broadband">Fixed broadband Internet subscribers</option>
+                <option value="population">Total population</option>
+                <option value="life">Life expectancy at birth</option>
+                <option value="child">Child mortality</option>
+                <option value="health">Government expenditure on health per-capita</option>
+                <option value="electricity">Electricity use per-capita</option>
+                <option value="eiti_gov">Government Revenue (as reported by Government)</option>
+                <option value="eiti_company">Government Revenue (as reported by Companies)</option>
+                <option value="gas">Gross Natural Gas Production</option>
+                <option value="oil">Total Oil Supply</option>
+                <option value="coal">Total Primary Coal Production</option>
+                <option value="out_of_school">Primary children out of school</option>
+                <option value="roads">Roads paved</option>
+                <option value="gdp">Income per person</option>
+                <option value="unemployment">Long term unemployment</option>
+            </select>
+        </div>
+    </div>
+    <div class="yearHolder">
+        <div class="val" style=" float:left;">Year:</div>
+        <div id="amount" style=" float:left;">2000</div>
+        <p>&nbsp;</p>
+    </div>
+    <div class="yearSliderHolder">
+        <div id="timeSlider" class="yearSlider"></div>
+    </div>
+    <div class="mapColumn">
+    </div>
+    <div class="map leftMap">
+
+        <div class="mapColumn">
+            <div class="legendHolder">
+                <img src="imgs/blu_gradient.png" alt="legend" class="legend">
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="map rightMap">
+    <div class="mapColumn">
+        <div class="legendHolder">
+            <img src="imgs/green.png" alt="legend" class="legend">
+        </div>
+    </div>
+    </div>
+
+</div>
+</body>
+
+</html>

@@ -1,17 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="SCOPE_TYPE" value="3" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="f4165c8a-1128-4d57-99d2-02dd879cef84" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/broadband.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/child.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/electricity.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/govRevenueByGov.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/health.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/life.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/map6.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/map6.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/population.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/style6.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/btu_total_production.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/coal.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/eiti_company.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/gas.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/gdp.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/oil.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/out_of_school.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/oldAndTest/rawData" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/roads.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/us_total_production.json" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/data/govRevenueByGov.json" afterPath="$PROJECT_DIR$/data/eiti_gov.json" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/data/jsonMugger.html" afterPath="$PROJECT_DIR$/oldAndTest/jsonMugger.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/data/rawData" afterPath="$PROJECT_DIR$/data/unemployment.json" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/data/rs_data.json" afterPath="$PROJECT_DIR$/oldAndTest/rs_data.json" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/map5.html" afterPath="$PROJECT_DIR$/oldAndTest/map5.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/map5.js" afterPath="$PROJECT_DIR$/oldAndTest/map5.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/map6.js" afterPath="$PROJECT_DIR$/src/map6.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="RewiredStateFollowTheData.iws" />
@@ -19,7 +30,7 @@
     <file path="/main.html" changelist="f4165c8a-1128-4d57-99d2-02dd879cef84" time="1367678405011" ignored="false" />
     <file path="/map.html" changelist="f4165c8a-1128-4d57-99d2-02dd879cef84" time="1367701218408" ignored="false" />
     <file path="/barrels.html" changelist="f4165c8a-1128-4d57-99d2-02dd879cef84" time="1367707392805" ignored="false" />
-    <file path="/Dummy.txt" changelist="f4165c8a-1128-4d57-99d2-02dd879cef84" time="1367790042991" ignored="false" />
+    <file path="/Dummy.txt" changelist="f4165c8a-1128-4d57-99d2-02dd879cef84" time="1367960752529" ignored="false" />
     <file path="/map4.html" changelist="f4165c8a-1128-4d57-99d2-02dd879cef84" time="1367747294080" ignored="false" />
     <file path="/map5.html" changelist="f4165c8a-1128-4d57-99d2-02dd879cef84" time="1367762972512" ignored="false" />
     <file path="/colorTest.html" changelist="f4165c8a-1128-4d57-99d2-02dd879cef84" time="1367750954272" ignored="false" />
@@ -28,7 +39,7 @@
     <file path="/jsonMugger.html" changelist="f4165c8a-1128-4d57-99d2-02dd879cef84" time="1367766027026" ignored="false" />
     <file path="/rs_data.json" changelist="f4165c8a-1128-4d57-99d2-02dd879cef84" time="1367785500873" ignored="false" />
     <file path="/map6.html" changelist="f4165c8a-1128-4d57-99d2-02dd879cef84" time="1367785309949" ignored="false" />
-    <file path="/map6.js" changelist="f4165c8a-1128-4d57-99d2-02dd879cef84" time="1367786117739" ignored="false" />
+    <file path="/map6.js" changelist="f4165c8a-1128-4d57-99d2-02dd879cef84" time="1367963551233" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,70 +62,16 @@
       <file leaf-file-name="map6.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/map6.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="32" selection-start="334" selection-end="334" vertical-scroll-proportion="0.0">
+            <state line="303" column="6" selection-start="10190" selection-end="10190" vertical-scroll-proportion="-181.8">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="rawData" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/data/rawData">
+      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="143270" selection-start="1224053" selection-end="1224053" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="govRevenueByGov.json" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/data/govRevenueByGov.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="17188" selection-start="17188" selection-end="17188" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="electricity.json" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/data/electricity.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="health.json" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/data/health.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="229022" selection-start="229022" selection-end="229022" vertical-scroll-proportion="-0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="child.json" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/data/child.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="240089" selection-start="240089" selection-end="240089" vertical-scroll-proportion="-0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="life.json" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/data/life.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="200481" selection-start="200481" selection-end="200481" vertical-scroll-proportion="-0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="population.json" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/data/population.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="208076" selection-start="208076" selection-end="208076" vertical-scroll-proportion="-0.0">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -138,22 +95,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/map5.js" />
-        <option value="$PROJECT_DIR$/style.css" />
-        <option value="$PROJECT_DIR$/map5.html" />
-        <option value="$PROJECT_DIR$/jsonMugger.html" />
-        <option value="$PROJECT_DIR$/rawData" />
-        <option value="$PROJECT_DIR$/rs_data.json" />
-        <option value="$PROJECT_DIR$/css/style6.css" />
-        <option value="$PROJECT_DIR$/map6.html" />
-        <option value="$PROJECT_DIR$/data/broadband.json" />
-        <option value="$PROJECT_DIR$/src/map6.js" />
-        <option value="$PROJECT_DIR$/data/population.json" />
-        <option value="$PROJECT_DIR$/data/life.json" />
         <option value="$PROJECT_DIR$/data/child.json" />
         <option value="$PROJECT_DIR$/data/health.json" />
         <option value="$PROJECT_DIR$/data/electricity.json" />
         <option value="$PROJECT_DIR$/data/govRevenueByGov.json" />
+        <option value="$PROJECT_DIR$/data/rawData" />
+        <option value="$PROJECT_DIR$/data/govRevenueByComp.json" />
+        <option value="$PROJECT_DIR$/data/gasProduction.json" />
+        <option value="$PROJECT_DIR$/data/unemployment.json" />
+        <option value="$PROJECT_DIR$/data/roads.json" />
+        <option value="$PROJECT_DIR$/data/primarySchool" />
+        <option value="$PROJECT_DIR$/data/oilSupply.json" />
+        <option value="$PROJECT_DIR$/data/income.json" />
+        <option value="$PROJECT_DIR$/data/coal.json" />
+        <option value="$PROJECT_DIR$/data/oilgascoilBTU.json" />
+        <option value="$PROJECT_DIR$/data/oilgascoalDollars.json" />
+        <option value="$PROJECT_DIR$/src/map6.js" />
       </list>
     </option>
   </component>
@@ -235,20 +192,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="RewiredStateFollowTheData" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="RewiredStateFollowTheData" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
@@ -280,11 +223,12 @@
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/src" />
+      <recent name="$PROJECT_DIR$/data" />
       <recent name="$PROJECT_DIR$/libs" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/css" />
       <recent name="$PROJECT_DIR$/oldAndTest" />
+      <recent name="$PROJECT_DIR$/css" />
       <recent name="$PROJECT_DIR$/data" />
       <recent name="$PROJECT_DIR$/imgs" />
       <recent name="$PROJECT_DIR$" />
@@ -435,24 +379,24 @@
     <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27044475" sideWeight="0.73970586" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2602941" sideWeight="0.60329986" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2382353" sideWeight="0.6025825" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2382353" sideWeight="0.39670014" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2602941" sideWeight="0.39670014" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2374462" sideWeight="0.7617647" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39967898" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -524,7 +468,7 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/map5.html</url>
+          <url>file://$PROJECT_DIR$/oldAndTest/map5.html</url>
           <option name="timeStamp" value="7" />
         </line-breakpoint>
       </breakpoints>
@@ -532,75 +476,72 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/oldAndTest/test.json">
+    <entry file="file://$PROJECT_DIR$/data/gas.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/map5.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="76" column="30" selection-start="3023" selection-end="3028" vertical-scroll-proportion="0.0">
+        <state line="0" column="236217" selection-start="236217" selection-end="236217" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/oldAndTest/indicator.json">
+    <entry file="file://$PROJECT_DIR$/data/unemployment.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="8" selection-start="299" selection-end="299" vertical-scroll-proportion="-10.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/map5.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="122" column="31" selection-start="4334" selection-end="4334" vertical-scroll-proportion="-76.25">
+        <state line="0" column="38" selection-start="38" selection-end="38" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/style6.css">
+    <entry file="file://$PROJECT_DIR$/data/roads.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="15" selection-start="110" selection-end="110" vertical-scroll-proportion="0.0">
+        <state line="0" column="135756" selection-start="135756" selection-end="135756" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/map6.html">
+    <entry file="file://$PROJECT_DIR$/data/eiti_company.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="0" selection-start="216" selection-end="216" vertical-scroll-proportion="0.0">
+        <state line="0" column="17060" selection-start="17060" selection-end="17060" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data/rs_data.json">
+    <entry file="file://$PROJECT_DIR$/data/gdp.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="229893" selection-start="1488298" selection-end="1531434" vertical-scroll-proportion="0.0">
+        <state line="0" column="43" selection-start="43" selection-end="43" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/coal.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="240143" selection-start="240143" selection-end="240143" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/btu_total_production.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="229853" selection-start="229853" selection-end="229853" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/us_total_production.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="236648" selection-start="236648" selection-end="236648" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/oldAndTest/rawData">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="158" selection-start="2732536" selection-end="2732536" vertical-scroll-proportion="0.5714286">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/data/broadband.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="20" selection-start="20" selection-end="20" vertical-scroll-proportion="-0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/map6.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="32" selection-start="334" selection-end="334" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/population.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="208076" selection-start="208076" selection-end="208076" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/life.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="200481" selection-start="200481" selection-end="200481" vertical-scroll-proportion="0.0">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
           <folding />
         </state>
       </provider>
@@ -612,30 +553,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data/health.json">
+    <entry file="file://$PROJECT_DIR$/map6.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="229022" selection-start="229022" selection-end="229022" vertical-scroll-proportion="0.0">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data/electricity.json">
+    <entry file="file://$PROJECT_DIR$/oldAndTest/map5.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="73" column="62" selection-start="2859" selection-end="2909" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/oil.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="235658" selection-start="235658" selection-end="235658" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/map6.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="303" column="6" selection-start="10190" selection-end="10190" vertical-scroll-proportion="-181.8">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/rawData">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="143270" selection-start="1224053" selection-end="1224053" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/govRevenueByGov.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="17188" selection-start="17188" selection-end="17188" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
