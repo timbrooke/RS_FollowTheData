@@ -1,0 +1,70 @@
+.ui-slider {
+    float: left;
+    position: relative;
+    text-align: left;
+    width: 98%;
+}
+
+#amount, .val {
+    font-size: 14pt;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+.map {
+    width: 50%;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.mapColumn {
+    margin: 10px;
+}
+
+.mapHolder {
+
+    height: 400px;
+    background-color: #EEEEEE;
+}
+
+.leftMap {
+    float: left;
+}
+
+.rightMap {
+    float: right;
+}
+
+.selectionBox {
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.yearSliderHolder {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 10px;
+}
+
+.yearSlider {
+    width: 100%;
+}
+
+.yearHolder {
+    padding: 10px 10px 0px 10px;
+    /* background-color: blue; */
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #666666;
+}
+
+.legendHolder {
+    margin: auto;
+    padding: 10px 5px 5px 5px;
+    max-width: 365px;
+}
